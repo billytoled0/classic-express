@@ -394,7 +394,7 @@
             <svg><use :href="p.muted ? '#i-mute' : '#i-vol'" /></svg>
           </button>
           <input v-if="p.canSetVolume" type="range" min="0" max="100" step="1" aria-label="Volumen"
-                 :value="p.muted ? 0 : p.volume" @input="player.setVolume($event.target.value)"
+                 :value="p.muted ? 0 : p.volume" @input="player.setVolume($event.target.value)" :style="{ '--vol': p.muted ? 0 : p.volume }"
                  :aria-valuetext="(p.muted ? 0 : p.volume) + '%'" />
         </div>
       </div>

@@ -31,7 +31,15 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 [v-cloak] { display: none; }
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scrollbar-color: var(--red) var(--ink); /* Firefox y Chrome 121+ */
+}
+/* Safari y Chrome viejos */
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--red); border: 3px solid var(--ink); border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: var(--red-2); }
 body {
   margin: 0;
   background: var(--paper);
@@ -393,7 +401,32 @@ p { text-wrap: pretty; }
 .pb-vol-panel { display: flex; align-items: center; gap: 10px; }
 .pb-mute { display: grid; place-items: center; width: 44px; height: 44px; opacity: 0.85; transition: opacity 0.2s; }
 .pb-mute:hover, .pb-vol.open > .pb-mute { opacity: 1; }
-.pb-vol input { width: 112px; accent-color: var(--red); cursor: pointer; }
+/* Slider de volumen con la marca: pista fina, tramo lleno en rojo, control cuadrado.
+   --vol (0–100) lo pone el HTML; Firefox pinta el tramo lleno con ::-moz-range-progress. */
+.pb-vol input {
+  -webkit-appearance: none; appearance: none;
+  width: 112px; height: 28px; margin: 0; background: transparent; cursor: pointer;
+  --fill: calc(var(--vol, 80) * 1%);
+}
+.pb-vol input::-webkit-slider-runnable-track {
+  height: 4px;
+  background: linear-gradient(to right, var(--red) var(--fill), #3A3A3A var(--fill)); /* taste-skill-ignore: relleno del slider, corte duro */
+}
+.pb-vol input::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 14px; height: 14px; margin-top: -5px; border: 0; border-radius: 0;
+  background: var(--paper); transition: transform 0.2s var(--ease-out);
+}
+.pb-vol input::-moz-range-track { height: 4px; background: #3A3A3A; border: 0; }
+.pb-vol input::-moz-range-progress { height: 4px; background: var(--red); }
+.pb-vol input::-moz-range-thumb { width: 14px; height: 14px; border: 0; border-radius: 0; background: var(--paper); transition: transform 0.2s var(--ease-out); }
+.pb-vol input:hover::-webkit-slider-thumb, .pb-vol input:active::-webkit-slider-thumb { transform: scale(1.25); }
+.pb-vol input:hover::-moz-range-thumb, .pb-vol input:active::-moz-range-thumb { transform: scale(1.25); }
+.pb-vol input:focus-visible { outline: 2px solid var(--paper); outline-offset: 4px; }
+@media (pointer: coarse) {
+  .pb-vol input::-webkit-slider-thumb { width: 22px; height: 22px; margin-top: -9px; }
+  .pb-vol input::-moz-range-thumb { width: 22px; height: 22px; }
+}
 /* Celular: el slider vive en un panel que abre el parlante */
 @media (max-width: 767px) {
   .pb-vol-panel:not(:only-child) {
