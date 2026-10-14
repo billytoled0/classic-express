@@ -37,7 +37,7 @@ Dirección "capítulos de color": cada sección es un campo plano a pantalla com
 
 - **Hero:** "Clásicos en vivo" cortado por la costura blanco/rojo. En el campo rojo aparecen el play y lo que suena ahora (Icecast, en vivo).
 - **Décadas:** si el título de la canción trae el año (p. ej. "Overkill (1983)"), esa década se enciende en rojo con "Sonando ahora".
-- **Fotos de archivo:** en blanco y negro como tratamiento único. Para cambiar una, reemplaza el `.webp` en `assets/archivo/` y actualiza su crédito en el footer de `index.html`.
+- **Fotos de archivo:** rock clásico (conciertos de 1970, guitarras, Marshall, batería) más tocadiscos, rockolas y discos, en blanco y negro como tratamiento único. Para cambiar una, reemplaza el `.webp` en `assets/archivo/` y actualiza su crédito en el footer de `index.html`.
 - **Movimiento:** los títulos suben desde su línea, las secciones entran al hacer scroll, la tira de fotos se desplaza y el clip del disco gira en loop. Con "Reducir movimiento" activado en el sistema, todo eso se apaga; el vinilo y el ecualizador siguen, porque solo se mueven al dar play.
 - **Revisión de calidad:** `node ~/.claude/skills/design-taste-frontend/scripts/inspect.mjs index.html --allow covered-text`. La regla `covered-text` se permite porque el inspector cuenta como "tapado" el texto que pasa por detrás de la barra fija del reproductor.
 
@@ -67,6 +67,32 @@ En `config.js`:
     <header name="Access-Control-Allow-Origin" value="*" />
   </http-headers>
   ```
+
+## Blog
+
+La página `#/blog` pide los artículos a tu backend la primera vez que alguien entra. Configúralo en `config.js`:
+
+```js
+blogUrl: 'https://api.classicforever.com/posts',   // null = muestra "Pronto"
+```
+
+El backend responde JSON, como una lista o como `{ "posts": [...] }`:
+
+```json
+{ "posts": [
+  { "titulo": "Por qué 1971 fue el mejor año del rock",
+    "fecha": "2026-10-10",
+    "resumen": "Una línea o dos.",
+    "imagen": "https://api.classicforever.com/img/1971.jpg",
+    "url": "https://classicforever.com/blog/1971" }
+] }
+```
+
+- **Campos:** `titulo` y `url` son obligatorios; sin ellos el artículo no se muestra. `fecha` (ISO), `resumen` e `imagen` son opcionales. Se ordenan del más nuevo al más viejo.
+- **Enlaces:** solo se aceptan `https://`, `http://` o rutas que empiecen con `/`. Cualquier otra cosa (`javascript:`, `data:`) se descarta (`normalizePosts` en `js/lib.js`, con tests).
+- **Artículo completo:** cada artículo enlaza a su `url`, así que la página del artículo la sirve el backend. Si prefieres mostrarlo dentro del sitio, se puede agregar `#/blog/<slug>` más adelante.
+- **CORS:** si el backend está en otro dominio, tiene que responder con `Access-Control-Allow-Origin` (por ejemplo `https://classicforever.com`).
+- **Ruta:** como el sitio es estático, la ruta es `#/blog`. Si más adelante quieres `/blog` "de verdad" servido por el backend, cambia el enlace del menú en `js/app.js` (`NAV`).
 
 ## Programación
 
@@ -104,7 +130,7 @@ Color: el rojo de los logos es `#FF0000` exacto y el sitio usa ese. Con texto bl
 
 ## Conductores
 
-Van en `data/programacion.js` → `conductores` (nombre y `descripcion`; las actuales son texto de ejemplo). Se muestran en el panel "Las voces de CLASSIC" (Inicio y Nosotros), junto a una foto de archivo de un estudio de radio de los 50 recortada en forma de disco.
+Van en `data/programacion.js` → `conductores` (nombre y `descripcion`; las actuales son texto de ejemplo). Se muestran en el panel "Las voces de CLASSIC" (Inicio y Nosotros), junto a una foto de archivo de un concierto de rock de 1970 recortada en forma de disco.
 
 ## SEO / compartir en WhatsApp
 

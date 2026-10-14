@@ -1,7 +1,7 @@
 // Ejecutar: node tests/lib.test.mjs
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
-const { cleanTitle, pickSource, splitTitle, yearOf, decadeOf, nowIn, showsFor, onAir } = createRequire(import.meta.url)('../js/lib.js');
+const { cleanTitle, pickSource, splitTitle, yearOf, decadeOf, safeUrl, normalizePosts, nowIn, showsFor, onAir } = createRequire(import.meta.url)('../js/lib.js');
 
 // Metadata
 assert.equal(cleanTitle('﻿ Men At Work - Overkill (1983) '), 'Men At Work - Overkill (1983)');
@@ -30,6 +30,27 @@ assert.equal(decadeOf(1960), '60');
 assert.equal(decadeOf(2009), null);
 assert.equal(decadeOf(1958), null);
 assert.equal(decadeOf(null), null);
+
+// Blog: lo que llega del backend
+assert.equal(safeUrl('https://classicforever.com/blog/x'), 'https://classicforever.com/blog/x');
+assert.equal(safeUrl('/blog/x'), '/blog/x');
+assert.equal(safeUrl('javascript:alert(1)'), null);
+assert.equal(safeUrl(' JavaScript:alert(1)'), null);
+assert.equal(safeUrl('data:text/html,hi'), null);
+assert.equal(safeUrl(42), null);
+const posts = normalizePosts({ posts: [
+  { titulo: 'Viejo', url: '/blog/viejo', fecha: '2026-01-02' },
+  { titulo: 'Nuevo', url: '/blog/nuevo', fecha: '2026-10-01', imagen: 'javascript:x', resumen: '  hola ' },
+  { titulo: '', url: '/blog/sin-titulo' },
+  { titulo: 'Sin enlace válido', url: 'javascript:alert(1)' },
+  null,
+] });
+assert.deepEqual(posts.map((p) => p.titulo), ['Nuevo', 'Viejo']);
+assert.equal(posts[0].imagen, null);
+assert.equal(posts[0].resumen, 'hola');
+assert.deepEqual(normalizePosts([{ titulo: 'A', url: 'https://x.com/a', fecha: 'no es fecha' }])[0].fecha, null);
+assert.deepEqual(normalizePosts(null), []);
+assert.deepEqual(normalizePosts({ otra: 1 }), []);
 
 // Programación — 2026-10-14 15:30 UTC es miércoles 10:30 en Lima (UTC-5)
 const now = nowIn('America/Lima', new Date('2026-10-14T15:30:00Z'));

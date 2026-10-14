@@ -9,24 +9,25 @@ const NAV = [
   { id: '', label: 'Inicio' },
   { id: 'nosotros', label: 'Nosotros' },
   { id: 'programacion', label: 'Programación' },
+  { id: 'blog', label: 'Blog' },
   { id: 'contacto', label: 'Contacto' },
 ];
 // Color del primer capítulo de cada página: la barra superior lo continúa.
-const HEADER_TONE = { '': 'paper', nosotros: 'ink', programacion: 'paper', contacto: 'red' };
+const HEADER_TONE = { '': 'paper', nosotros: 'ink', programacion: 'paper', blog: 'paper', contacto: 'red' };
 
 // TEXTO DE EJEMPLO: lo que suena de cada década (confirmar con la radio)
 const DECADES = [
-  { id: '60', fact: 'Baladas, twist y la invasión británica' },
-  { id: '70', fact: 'Soul, disco y los grandes cantautores' },
-  { id: '80', fact: 'Pop, new wave y baladas en español' },
-  { id: '90', fact: 'Los éxitos que cerraron el siglo' },
+  { id: '60', fact: 'La invasión británica y el nacimiento del rock' },
+  { id: '70', fact: 'Rock clásico, hard rock y progresivo' },
+  { id: '80', fact: 'Rock de estadio, new wave y rock en español' },
+  { id: '90', fact: 'Grunge, britpop y los últimos himnos' },
 ];
 
 // Tira de fotos de "Pide tu canción" (se repite dos veces para el desplazamiento continuo)
 const STRIP = [
-  ['buscando-discos', 'l'], ['rockola-wurlitzer-600a', 'p'], ['radio-sony-tr730', 'q'],
-  ['disqueria-1963', 'l'], ['tocadiscos-philips', 'p'], ['microfonos-estudio', 'l'],
-  ['rockola-wurlitzer-1100', 'q'], ['tocadiscos-zenith', 'l'], ['estudio-radio-1950s', 'p'],
+  ['festival-rock-1970', 'l'], ['guitarra-stratocaster', 'p'], ['marshall-plexi-1968', 'q'],
+  ['disqueria-1963', 'l'], ['rockola-wurlitzer-600a', 'p'], ['bateria-slingerland', 'l'],
+  ['flying-v-hendrix', 'p'], ['tocadiscos-philips', 'q'], ['concierto-rock', 'l'],
 ].map(([name, shape]) => ({ src: `assets/archivo/${name}.webp`, shape }));
 
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -52,6 +53,28 @@ function sendForm() {
   }
   window.open(waLink(`Hola ${cfg.name}, soy ${form.name.trim()}. Quiero pedir: ${form.message.trim()}`), '_blank', 'noopener');
 }
+
+// ── Blog: se pide al backend la primera vez que se entra a #/blog ──
+const blog = reactive({ state: cfg.blogUrl ? 'idle' : 'soon', posts: [] });
+async function loadBlog() {
+  if (blog.state !== 'idle') return;
+  blog.state = 'loading';
+  try {
+    const res = await fetch(cfg.blogUrl, { signal: AbortSignal.timeout(8000) });
+    if (!res.ok) throw new Error(res.status);
+    blog.posts = normalizePosts(await res.json());
+    blog.state = 'ok';
+  } catch {
+    blog.state = 'error';
+  }
+  await nextTick();
+  watchReveals();
+}
+// "2026-10-10" (solo fecha) se lee como medianoche UTC: se muestra en UTC para no
+// correrse al día anterior en Lima. Con hora incluida, se usa la zona de la emisora.
+const postDate = (iso) => new Intl.DateTimeFormat('es-PE', {
+  dateStyle: 'long', timeZone: /^\d{4}-\d{2}-\d{2}$/.test(iso) ? 'UTC' : cfg.timezone,
+}).format(new Date(iso));
 
 const shared = { cfg, p, player, hosts, DECADES, STRIP, liveDecade, form, sendForm, waLink };
 
@@ -95,6 +118,7 @@ createApp({
     addEventListener('hashchange', async () => {
       if (location.hash === '#main') return;
       route.value = readRoute();
+      if (route.value === 'blog') loadBlog();
       volOpen.value = false;
       setTitle();
       scrollTo(0, 0);
@@ -103,6 +127,7 @@ createApp({
       focusMain(); // lectores de pantalla anuncian la nueva página
     });
     setTitle();
+    if (route.value === 'blog') loadBlog();
     nextTick(afterRender);
 
     // ── Programación y reloj de la emisora ──
@@ -165,6 +190,7 @@ createApp({
       NAV, DAYS, DAY_LABELS, route, headerTone, focusMain,
       now, day, dayShows, hasShows, tzLabel, clock, onAir,
       volPanel, volOpen,
+      blog, postDate,
       eqClass, bars24: makeBars(24), bars16: makeBars(16),
       year: new Date().getFullYear(),
     };

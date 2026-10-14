@@ -1,6 +1,6 @@
 {
  "url": "index.html",
- "at": "2026-10-14T20:47:18.194Z",
+ "at": "2026-10-14T21:08:09.705Z",
  "allow": [
   "covered-text"
  ],
@@ -11,13 +11,13 @@
    "load": "load",
    "screens": 7,
    "filled": [
-    0.47,
+    0.52,
     0.91,
-    0.62,
+    0.63,
     0.99,
     0.93,
-    0.92,
-    0.88
+    0.93,
+    0.87
    ],
    "motion": {
     "elements": 32,
@@ -33,9 +33,9 @@
      "h": 900
     },
     "page": {
-     "height": 5675,
-     "screens": 6.3,
-     "words": 340,
+     "height": 5731,
+     "screens": 6.4,
+     "words": 362,
      "img": 26,
      "video": 1,
      "canvas": 0,
@@ -50,12 +50,12 @@
      "uiPictures": 0,
      "pictureSamples": [
       "icon.webp",
-      "disqueria-1963.webp",
-      "rockola-wurlitzer-1100.webp",
+      "concierto-rock.webp",
+      "stratocaster-1958.webp",
       "tocadiscos-zenith.webp",
-      "estudio-radio-1950s.webp",
-      "buscando-discos.webp",
-      "radio-sony-tr730.webp",
+      "concierto-rock-1970.webp",
+      "festival-rock-1970.webp",
+      "marshall-plexi-1968.webp",
       "disqueria-1963.webp"
      ],
      "blendText": 0,
@@ -114,9 +114,9 @@
       "kind": "heading"
      },
      {
-      "text": "Everybody's Talkin'",
-      "words": 2,
-      "chars": 19,
+      "text": "Don't Look Back",
+      "words": 3,
+      "chars": 15,
       "lines": 1,
       "size": 36,
       "vw": 2.5,
@@ -130,15 +130,15 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.27,
-      "top": 684,
+      "top": 713,
       "tag": "p",
       "kind": "statement"
      },
      {
-      "text": "Radio online de clásicos: de los 60 a los 90, elegidos uno por uno y sonando sin cortes, día y noche.",
-      "words": 21,
-      "chars": 101,
-      "lines": 3,
+      "text": "Rock clásico de los 60 a los 90, elegido tema por tema y sonando sin cortes, día y noche.",
+      "words": 19,
+      "chars": 89,
+      "lines": 2,
       "size": 36,
       "vw": 2.5,
       "font": "Stack Sans Text",
@@ -151,7 +151,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.56,
-      "top": 1111,
+      "top": 1135,
       "tag": "p",
       "kind": "statement"
      },
@@ -345,10 +345,10 @@
       "kind": "heading"
      },
      {
-      "text": "Los clásicos de siempre... siempre contigo.",
-      "words": 6,
-      "chars": 43,
-      "lines": 3,
+      "text": "Los clásicos de siempre.",
+      "words": 4,
+      "chars": 24,
+      "lines": 2,
       "size": 36,
       "vw": 2.5,
       "font": "Stack Sans Text",
@@ -366,7 +366,7 @@
       "kind": "statement"
      },
      {
-      "text": "15:47",
+      "text": "16:08",
       "words": 1,
       "chars": 5,
       "lines": 1,
@@ -382,7 +382,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.13,
-      "top": 5048,
+      "top": 5082,
       "tag": "p",
       "kind": "statement"
      },
@@ -403,14 +403,14 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.32,
-      "top": 5121,
+      "top": 5156,
       "tag": "button",
       "kind": "heading"
      }
     ],
     "headingSummary": {
      "count": 15,
-     "maxLines": 3,
+     "maxLines": 2,
      "over2Lines": 0,
      "statements": 8,
      "centered": 1,
@@ -463,7 +463,7 @@
      "microLabelShare": 0,
      "microSamples": [],
      "upperShare": 0.03,
-     "centerShare": 0.07,
+     "centerShare": 0.06,
      "smallText": 0
     },
     "eyebrows": [],
@@ -496,10 +496,10 @@
        }
       },
       {
-       "color": "#0b0b0a",
+       "color": "#0b0a0b",
        "top": 824,
        "hsl": {
-        "h": 60,
+        "h": 300,
         "s": 0.05,
         "l": 0.04
        }
@@ -508,11 +508,11 @@
      "textColors": [
       {
        "color": "#fffefe",
-       "share": 0.68
+       "share": 0.71
       },
       {
-       "color": "#0b0b0a",
-       "share": 0.31
+       "color": "#0b0a0b",
+       "share": 0.28
       },
       {
        "color": "#fe0100",
@@ -520,9 +520,9 @@
       }
      ],
      "button": {
-      "bg": "#0b0b0a",
+      "bg": "#0b0a0b",
       "hsl": {
-       "h": 60,
+       "h": 300,
        "s": 0.05,
        "l": 0.04
       },
@@ -571,7 +571,7 @@
      }
     ],
     "nav": {
-     "links": 5,
+     "links": 6,
      "fixed": false,
      "height": 72,
      "floatingPill": false,
@@ -590,18 +590,18 @@
    "load": "load",
    "screens": 7,
    "filled": [
-    0.53,
-    0.93,
-    0.76,
+    0.52,
+    0.9,
+    0.86,
     0.98,
-    0.93,
+    0.99,
     0.9,
     0.99
    ],
    "motion": {
-    "elements": 32,
+    "elements": 31,
     "css": 15,
-    "transitions": 17,
+    "transitions": 16,
     "scripted": 0,
     "videos": 1,
     "playingVideos": 1
@@ -612,9 +612,9 @@
      "h": 1024
     },
     "page": {
-     "height": 6568,
-     "screens": 6.4,
-     "words": 340,
+     "height": 6636,
+     "screens": 6.5,
+     "words": 362,
      "img": 26,
      "video": 1,
      "canvas": 0,
@@ -628,14 +628,14 @@
      "videoCount": 1,
      "uiPictures": 0,
      "pictureSamples": [
+      "concierto-rock.webp",
+      "stratocaster-1958.webp",
+      "concierto-rock-1970.webp",
+      "festival-rock-1970.webp",
+      "marshall-plexi-1968.webp",
       "disqueria-1963.webp",
-      "rockola-wurlitzer-1100.webp",
-      "estudio-radio-1950s.webp",
-      "buscando-discos.webp",
-      "radio-sony-tr730.webp",
-      "disqueria-1963.webp",
-      "microfonos-estudio.webp",
-      "rockola-wurlitzer-1100.webp"
+      "bateria-slingerland.webp",
+      "tocadiscos-philips.webp"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -693,9 +693,9 @@
       "kind": "heading"
      },
      {
-      "text": "Everybody's Talkin'",
-      "words": 2,
-      "chars": 19,
+      "text": "Don't Look Back",
+      "words": 3,
+      "chars": 15,
       "lines": 1,
       "size": 26.8,
       "vw": 3.5,
@@ -709,15 +709,15 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.48,
-      "top": 804,
+      "top": 831,
       "tag": "p",
       "kind": "statement"
      },
      {
-      "text": "Radio online de clásicos: de los 60 a los 90, elegidos uno por uno y sonando sin cortes, día y noche.",
-      "words": 21,
-      "chars": 101,
-      "lines": 3,
+      "text": "Rock clásico de los 60 a los 90, elegido tema por tema y sonando sin cortes, día y noche.",
+      "words": 19,
+      "chars": 89,
+      "lines": 2,
       "size": 26.8,
       "vw": 3.5,
       "font": "Stack Sans Text",
@@ -751,7 +751,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.28,
-      "top": 1990,
+      "top": 1979,
       "tag": "span",
       "kind": "statement"
      },
@@ -772,7 +772,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.27,
-      "top": 2061,
+      "top": 2026,
       "tag": "span",
       "kind": "statement"
      },
@@ -793,7 +793,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.28,
-      "top": 2131,
+      "top": 2096,
       "tag": "span",
       "kind": "statement"
      },
@@ -814,7 +814,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.28,
-      "top": 2202,
+      "top": 2167,
       "tag": "span",
       "kind": "statement"
      },
@@ -835,7 +835,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.94,
-      "top": 2448,
+      "top": 2413,
       "tag": "h2",
       "kind": "heading"
      },
@@ -856,7 +856,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 3467,
+      "top": 3459,
       "tag": "h2",
       "kind": "heading"
      },
@@ -877,7 +877,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.54,
-      "top": 3603,
+      "top": 3595,
       "tag": "h3",
       "kind": "heading"
      },
@@ -898,7 +898,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.54,
-      "top": 3737,
+      "top": 3729,
       "tag": "h3",
       "kind": "heading"
      },
@@ -919,7 +919,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.94,
-      "top": 4747,
+      "top": 4739,
       "tag": "h2",
       "kind": "heading"
      },
@@ -940,14 +940,14 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.97,
-      "top": 5517,
+      "top": 5509,
       "tag": "button",
       "kind": "heading"
      },
      {
-      "text": "Los clásicos de siempre... siempre contigo.",
-      "words": 6,
-      "chars": 43,
+      "text": "Los clásicos de siempre.",
+      "words": 4,
+      "chars": 24,
       "lines": 1,
       "size": 26.8,
       "vw": 3.5,
@@ -961,12 +961,12 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 5743,
+      "top": 5735,
       "tag": "p",
       "kind": "statement"
      },
      {
-      "text": "15:47",
+      "text": "16:08",
       "words": 1,
       "chars": 5,
       "lines": 1,
@@ -982,14 +982,14 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.43,
-      "top": 6070,
+      "top": 6095,
       "tag": "p",
       "kind": "statement"
      }
     ],
     "headingSummary": {
      "count": 15,
-     "maxLines": 3,
+     "maxLines": 2,
      "over2Lines": 0,
      "statements": 8,
      "centered": 1,
@@ -1042,7 +1042,7 @@
      "microLabelShare": 0,
      "microSamples": [],
      "upperShare": 0.03,
-     "centerShare": 0.07,
+     "centerShare": 0.06,
      "smallText": 0
     },
     "eyebrows": [],
@@ -1075,10 +1075,10 @@
        }
       },
       {
-       "color": "#0b0b0a",
+       "color": "#0b0a0b",
        "top": 948,
        "hsl": {
-        "h": 60,
+        "h": 300,
         "s": 0.05,
         "l": 0.04
        }
@@ -1087,11 +1087,11 @@
      "textColors": [
       {
        "color": "#fffefe",
-       "share": 0.68
+       "share": 0.71
       },
       {
-       "color": "#0b0b0a",
-       "share": 0.31
+       "color": "#0b0a0b",
+       "share": 0.28
       },
       {
        "color": "#fe0100",
@@ -1099,9 +1099,9 @@
       }
      ],
      "button": {
-      "bg": "#0b0b0a",
+      "bg": "#0b0a0b",
       "hsl": {
-       "h": 60,
+       "h": 300,
        "s": 0.05,
        "l": 0.04
       },
@@ -1141,14 +1141,7 @@
      "roundedMedia": 0,
      "mediaRadius": 0,
      "textShadow": 0,
-     "cardRows": [
-      {
-       "count": 3,
-       "iconTopped": false,
-       "rounded": false,
-       "top": 5889
-      }
-     ]
+     "cardRows": []
     },
     "heroMedia": [
      {
@@ -1157,7 +1150,7 @@
      }
     ],
     "nav": {
-     "links": 5,
+     "links": 6,
      "fixed": false,
      "height": 72,
      "floatingPill": false,
@@ -1176,19 +1169,19 @@
    "load": "load",
    "screens": 8,
    "filled": [
-    0.59,
+    0.6,
     1,
-    0.66,
-    0.89,
-    0.94,
+    0.57,
+    0.91,
+    0.93,
     0.87,
     1,
     1
    ],
    "motion": {
-    "elements": 30,
+    "elements": 29,
     "css": 13,
-    "transitions": 17,
+    "transitions": 16,
     "scripted": 0,
     "videos": 1,
     "playingVideos": 1
@@ -1199,9 +1192,9 @@
      "h": 844
     },
     "page": {
-     "height": 6095,
-     "screens": 7.2,
-     "words": 340,
+     "height": 6261,
+     "screens": 7.4,
+     "words": 362,
      "img": 26,
      "video": 1,
      "canvas": 0,
@@ -1215,9 +1208,9 @@
      "videoCount": 1,
      "uiPictures": 0,
      "pictureSamples": [
-      "disqueria-1963.webp",
-      "rockola-wurlitzer-1100.webp",
-      "estudio-radio-1950s.webp"
+      "concierto-rock.webp",
+      "stratocaster-1958.webp",
+      "concierto-rock-1970.webp"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -1275,9 +1268,9 @@
       "kind": "heading"
      },
      {
-      "text": "Everybody's Talkin'",
-      "words": 2,
-      "chars": 19,
+      "text": "Don't Look Back",
+      "words": 3,
+      "chars": 15,
       "lines": 1,
       "size": 22,
       "vw": 5.6,
@@ -1291,14 +1284,14 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.72,
-      "top": 615,
+      "top": 666,
       "tag": "p",
       "kind": "statement"
      },
      {
-      "text": "Radio online de clásicos: de los 60 a los 90, elegidos uno por uno y sonando sin cortes, día y noche.",
-      "words": 21,
-      "chars": 101,
+      "text": "Rock clásico de los 60 a los 90, elegido tema por tema y sonando sin cortes, día y noche.",
+      "words": 19,
+      "chars": 89,
       "lines": 3,
       "size": 22,
       "vw": 5.6,
@@ -1354,7 +1347,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.43,
-      "top": 1925,
+      "top": 1951,
       "tag": "span",
       "kind": "statement"
      },
@@ -1375,7 +1368,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.44,
-      "top": 2036,
+      "top": 2061,
       "tag": "span",
       "kind": "statement"
      },
@@ -1396,7 +1389,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.44,
-      "top": 2147,
+      "top": 2198,
       "tag": "span",
       "kind": "statement"
      },
@@ -1417,7 +1410,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 2434,
+      "top": 2485,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1438,7 +1431,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.86,
-      "top": 3232,
+      "top": 3307,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1459,7 +1452,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.86,
-      "top": 3341,
+      "top": 3392,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1480,7 +1473,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.86,
-      "top": 3493,
+      "top": 3544,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1501,7 +1494,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 4235,
+      "top": 4286,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1522,15 +1515,15 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.95,
-      "top": 4910,
+      "top": 4961,
       "tag": "button",
       "kind": "heading"
      },
      {
-      "text": "Los clásicos de siempre... siempre contigo.",
-      "words": 6,
-      "chars": 43,
-      "lines": 2,
+      "text": "Los clásicos de siempre.",
+      "words": 4,
+      "chars": 24,
+      "lines": 1,
       "size": 22,
       "vw": 5.6,
       "font": "Stack Sans Text",
@@ -1543,12 +1536,12 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.85,
-      "top": 5136,
+      "top": 5187,
       "tag": "p",
       "kind": "statement"
      },
      {
-      "text": "15:47",
+      "text": "16:08",
       "words": 1,
       "chars": 5,
       "lines": 1,
@@ -1564,7 +1557,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.36,
-      "top": 5460,
+      "top": 5542,
       "tag": "p",
       "kind": "statement"
      }
@@ -1660,20 +1653,20 @@
        }
       },
       {
-       "color": "#0b0b0a",
+       "color": "#0b0a0b",
        "top": 768,
        "hsl": {
-        "h": 60,
+        "h": 300,
         "s": 0.05,
         "l": 0.04
        }
       },
       {
-       "color": "#1a1a1a",
-       "top": 5677,
+       "color": "#1b1b1a",
+       "top": 5760,
        "hsl": {
-        "h": 0,
-        "s": 0,
+        "h": 60,
+        "s": 0.02,
         "l": 0.1
        }
       }
@@ -1681,11 +1674,11 @@
      "textColors": [
       {
        "color": "#fffefe",
-       "share": 0.68
+       "share": 0.71
       },
       {
-       "color": "#0b0b0a",
-       "share": 0.31
+       "color": "#0b0a0b",
+       "share": 0.28
       },
       {
        "color": "#fe0100",
@@ -1693,9 +1686,9 @@
       }
      ],
      "button": {
-      "bg": "#0b0b0a",
+      "bg": "#0b0a0b",
       "hsl": {
-       "h": 60,
+       "h": 300,
        "s": 0.05,
        "l": 0.04
       },
@@ -1735,18 +1728,11 @@
      "roundedMedia": 0,
      "mediaRadius": 0,
      "textShadow": 0,
-     "cardRows": [
-      {
-       "count": 3,
-       "iconTopped": false,
-       "rounded": false,
-       "top": 5282
-      }
-     ]
+     "cardRows": []
     },
     "heroMedia": [],
     "nav": {
-     "links": 5,
+     "links": 6,
      "fixed": false,
      "height": 104,
      "floatingPill": false,

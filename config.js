@@ -16,6 +16,10 @@ const CLASSIC_CONFIG = {
   // false = siempre animación simulada (úsalo si Icecast deja de enviar CORS).
   visualizer: true,
 
+  // Blog: URL del backend que devuelve los artículos en JSON (ver README, "Blog").
+  // null = la página /blog muestra "Pronto".
+  blogUrl: null,
+
   // Zona horaria de la emisora: define qué programa está "Al aire".
   timezone: 'America/Lima',
 

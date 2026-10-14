@@ -33,6 +33,28 @@ function decadeOf(year) {
   return year >= 1960 && year < 2000 ? String(Math.floor(year / 10) % 10 * 10) : null;
 }
 
+// ── Blog ───────────────────────────────────────────────────────────
+
+// Solo enlaces http(s), relativos al protocolo o rutas del sitio: el backend es
+// externo, así que un "javascript:" o "data:" nunca llega a un href o src.
+const safeUrl = (u) => (typeof u === 'string' && /^(https?:\/\/|\/)/i.test(u.trim()) ? u.trim() : null);
+
+// La respuesta del backend puede ser una lista o { posts: [...] }. Se descartan
+// los artículos sin título o sin enlace válido, y se ordenan del más nuevo al más viejo.
+function normalizePosts(data) {
+  const list = Array.isArray(data) ? data : Array.isArray(data?.posts) ? data.posts : [];
+  return list
+    .map((p) => ({
+      titulo: typeof p?.titulo === 'string' ? p.titulo.trim() : '',
+      resumen: typeof p?.resumen === 'string' ? p.resumen.trim() : '',
+      fecha: p?.fecha && !Number.isNaN(Date.parse(p.fecha)) ? p.fecha : null,
+      imagen: safeUrl(p?.imagen),
+      url: safeUrl(p?.url),
+    }))
+    .filter((p) => p.titulo && p.url)
+    .sort((a, b) => (Date.parse(b.fecha) || 0) - (Date.parse(a.fecha) || 0));
+}
+
 // ── Programación ───────────────────────────────────────────────────
 
 const DAYS = ['lun', 'mar', 'mie', 'jue', 'vie', 'sab', 'dom'];
@@ -64,4 +86,4 @@ const showsFor = (shows, day) =>
 const onAir = (show, now) =>
   show.dias.includes(now.day) && toMin(show.inicio) <= now.min && now.min < toMin(show.fin);
 
-if (typeof module === 'object') module.exports = { cleanTitle, pickSource, splitTitle, yearOf, decadeOf, DAYS, DAY_LABELS, toMin, nowIn, showsFor, onAir };
+if (typeof module === 'object') module.exports = { cleanTitle, pickSource, splitTitle, yearOf, decadeOf, safeUrl, normalizePosts, DAYS, DAY_LABELS, toMin, nowIn, showsFor, onAir };

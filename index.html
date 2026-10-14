@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>CLASSIC — Los clásicos de siempre</title>
-  <meta name="description" content="CLASSIC, radio online. Los clásicos de los 60 a los 90 en vivo las 24 horas: dale play y escucha desde tu celular o computadora." />
+  <meta name="description" content="CLASSIC, radio online de rock clásico. Los clásicos de los 60 a los 90 en vivo las 24 horas: dale play y escucha desde tu celular o computadora." />
   <meta name="theme-color" content="#FFFFFF" />
 
   <!-- Open Graph (WhatsApp, Facebook). og:url y og:image deben ser URLs absolutas -->
@@ -85,10 +85,10 @@
         <span class="line"><span data-line style="--i:0">Así</span></span>
         <span class="line"><span data-line style="--i:1">sonaba</span></span>
       </h2>
-      <p class="prints-note" data-reveal>Disquerías, rockolas y tocadiscos: el mundo donde nacieron las canciones que pasamos.</p>
+      <p class="prints-note" data-reveal>Escenarios, guitarras, rockolas y tocadiscos: el mundo donde nacieron las canciones que pasamos.</p>
       <div class="prints-stack">
-        <figure class="print print-a" data-reveal><img src="assets/archivo/disqueria-1963.webp" alt="Una disquería de 1963 llena de gente revisando discos" width="900" height="1200" loading="lazy" /></figure>
-        <figure class="print print-b" data-reveal><img src="assets/archivo/rockola-wurlitzer-1100.webp" alt="Rockola Wurlitzer 1100 iluminada, con los discos a la vista" width="900" height="1200" loading="lazy" /></figure>
+        <figure class="print print-a" data-reveal><img src="assets/archivo/concierto-rock.webp" alt="Una banda de rock tocando en un escenario iluminado" width="900" height="1200" loading="lazy" /></figure>
+        <figure class="print print-b" data-reveal><img src="assets/archivo/stratocaster-1958.webp" alt="Guitarra eléctrica Fender Stratocaster de 1958" width="900" height="1200" loading="lazy" /></figure>
         <figure class="print print-c" data-reveal><img src="assets/archivo/tocadiscos-zenith.webp" alt="Tocadiscos portátil Zenith de 33 y 45 revoluciones" width="900" height="1200" loading="lazy" /></figure>
       </div>
     </div>
@@ -101,7 +101,7 @@
     <div class="panel">
       <h2 id="voices-h" class="panel-title" data-reveal>Las voces<br />de CLASSIC</h2>
       <figure class="panel-photo" data-reveal>
-        <img src="assets/archivo/estudio-radio-1950s.webp" alt="Un estudio de radio de los años 50 conservado en un museo" width="1400" height="933" loading="lazy" />
+        <img src="assets/archivo/concierto-rock-1970.webp" alt="Un baterista tocando en un concierto de rock al aire libre en 1970" width="1400" height="1400" loading="lazy" />
         <span class="panel-hole" aria-hidden="true"></span>
       </figure>
       <div class="panel-text">
@@ -184,7 +184,7 @@
           </span>
         </h1>
 
-        <p class="hero-sub">{{ cfg.slogan }} Radio online de los 60 a los 90, las 24 horas.</p>
+        <p class="hero-sub">{{ cfg.slogan }} Rock clásico de los 60 a los 90, las 24 horas.</p>
 
         <div class="hero-live">
           <button class="play-big" :class="{ 'is-loading': p.loading }" @click="player.toggle()"
@@ -215,7 +215,7 @@
       <section class="ch ch-ink intro">
         <div class="wrap intro-grid">
           <div class="intro-text">
-            <p class="statement" data-reveal>Radio online de clásicos: de los 60 a los 90, elegidos uno por uno y sonando sin cortes, día y noche.</p>
+            <p class="statement" data-reveal>Rock clásico de los 60 a los 90, elegido tema por tema y sonando sin cortes, día y noche.</p>
             <p class="intro-body" data-reveal>No hay nada que elegir ni que instalar. Dale play desde el celular o la computadora y deja que suene.</p>
           </div>
           <figure class="intro-clip" data-reveal>
@@ -276,6 +276,30 @@
       <decade-list></decade-list>
     </template>
 
+    <!-- ═════════ Blog: los artículos llegan del backend (config.js → blogUrl) ═════════ -->
+    <section v-else-if="route === 'blog'" class="ch ch-paper blog">
+      <div class="wrap">
+        <h1 class="sched-title" tabindex="-1" data-reveal>Blog</h1>
+        <div v-if="blog.state === 'loading' || blog.state === 'idle'" class="posts" aria-busy="true">
+          <div v-for="i in 3" :key="i" class="post-skel"><span class="skel" style="width: 12ch"></span><span class="skel" style="width: 28ch; height: 1.6em"></span></div>
+        </div>
+        <p v-else-if="blog.state === 'error'" class="statement">No pudimos cargar las notas. Vuelve a intentarlo en un rato; la radio sigue sonando.</p>
+        <p v-else-if="blog.state === 'soon' || !blog.posts.length" class="statement" data-reveal>Pronto: historias detrás de las canciones, discos que marcaron época y lo que se viene en CLASSIC.</p>
+        <ol v-else class="posts">
+          <li v-for="post in blog.posts" :key="post.url" data-reveal>
+            <a class="post" :href="post.url">
+              <img v-if="post.imagen" :src="post.imagen" alt="" loading="lazy" width="560" height="420" />
+              <span class="post-text">
+                <time v-if="post.fecha" :datetime="post.fecha">{{ postDate(post.fecha) }}</time>
+                <span class="post-title">{{ post.titulo }}</span>
+                <span v-if="post.resumen" class="post-sum">{{ post.resumen }}</span>
+              </span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
     <!-- ═════════ Contacto ═════════ -->
     <template v-else-if="route === 'contacto'">
       <song-request level="h1"></song-request>
@@ -319,15 +343,18 @@
         <svg class="t-arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
       </button>
       <p class="tile t-credits">Imágenes y video de archivo, vía Wikimedia Commons y en blanco y negro:
+        <a href="https://commons.wikimedia.org/wiki/File:ROCK_CONCERT._(FROM_THE_SITES_EXHIBITION._FOR_OTHER_IMAGES_IN_THIS_ASSIGNMENT,_SEE_FICHE_NUMBERS_42,_97.)_-_NARA_-_553890.jpg">“Rock Concert”</a>, Erik Calonius (NARA), dominio público;
+        <a href="https://commons.wikimedia.org/w/index.php?curid=119940647">“Rock concert at Sick's Stadium, 1970”</a> y <a href="https://commons.wikimedia.org/w/index.php?curid=74775063">“Rock festival at Sick's Stadium, 1970”</a>, Seattle Municipal Archives, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>;
+        <a href="https://commons.wikimedia.org/w/index.php?curid=75817511">“1958 Fender Stratocaster”</a>, Lightburst, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>;
+        <a href="https://commons.wikimedia.org/wiki/File:Fender_Stratocaster_004-2.jpg">“Fender Stratocaster 004-2”</a>, Stra2caster / Atlantictire, dominio público;
+        <a href="https://commons.wikimedia.org/wiki/File:Marshall_Plexi_1968_@_FUZZ_Guitar_Show_2008.jpg">“Marshall Plexi 1968”</a>, Karl Jonsson, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>;
+        <a href="https://commons.wikimedia.org/w/index.php?curid=8406848">“Slingerland drum kit”</a>, eyeliam, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>;
+        <a href="https://commons.wikimedia.org/w/index.php?curid=8718076">“Jimi Hendrix's Flying V Gibson Guitar”</a>, Mike Cattell, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>;
         <a href="https://commons.wikimedia.org/wiki/File:US_Record_Store_1963.jpg">“US Record Store 1963”</a>, Marion S. Trikosko, dominio público;
         <a href="https://commons.wikimedia.org/wiki/File:Wurlitzer_1100_Jukebox.jpg">“Wurlitzer 1100 Jukebox”</a>, Manro Classic Museum, CC0;
-        <a href="https://commons.wikimedia.org/wiki/File:Portable_Philips_LP-_record_player.jpg">“Portable Philips LP record player”</a>, Amitbalani, CC0;
         <a href="https://commons.wikimedia.org/w/index.php?curid=146621056">“Jukebox Wurlitzer 600A 1938”</a>, Museo del disco d'epoca, CC0;
+        <a href="https://commons.wikimedia.org/wiki/File:Portable_Philips_LP-_record_player.jpg">“Portable Philips LP record player”</a>, Amitbalani, CC0;
         <a href="https://commons.wikimedia.org/w/index.php?curid=33716713">“Zenith Model B505B Phonograph”</a>, r. nial bradshaw, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>;
-        <a href="https://commons.wikimedia.org/wiki/File:Buying_Old_Records_(Unsplash).jpg">“Buying Old Records”</a>, Seth Doyle, CC0;
-        <a href="https://commons.wikimedia.org/w/index.php?curid=19738633">“EMI RM-1B &amp; HB-1E microphones”</a>, MrJamesAckerley, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>;
-        <a href="https://commons.wikimedia.org/w/index.php?curid=115337874">“KCLV &amp; KTOM Radio Station Studio exhibit”</a>, Greg Gjerdingen, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>;
-        <a href="https://commons.wikimedia.org/w/index.php?curid=45856828">“Vintage Sony TR-730 Transistor Radio”</a>, Joe Haupt, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>;
         <a href="https://commons.wikimedia.org/wiki/File:78tours_gros_plan.ogv">“78tours gros plan”</a> (video), Zecas, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>.
       </p>
     </div>
