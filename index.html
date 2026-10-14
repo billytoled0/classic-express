@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>CLASSIC — Los clásicos de siempre... siempre contigo.</title>
-  <meta name="description" content="CLASSIC, radio online. Los clásicos de siempre en vivo las 24 horas: dale play y escucha desde tu celular o computadora." />
-  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="CLASSIC, radio online. Los clásicos de los 60 a los 90 en vivo las 24 horas: dale play y escucha desde tu celular o computadora." />
+  <meta name="theme-color" content="#FFFFFF" />
 
   <!-- Open Graph (WhatsApp, Facebook). og:url y og:image deben ser URLs absolutas -->
   <meta property="og:type" content="website" />
@@ -22,13 +22,14 @@
   <link rel="icon" href="assets/img/icon.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/logos/icono-cuadrado-negro-rojo.png" />
 
-  <!-- Outfit (títulos): geométrica y pesada como el wordmark. Geist (cuerpo): sobria y muy legible en pantallas chicas. -->
+  <!-- Stack Sans: geométrica, una sola familia en dos cortes (titulares livianos y grandes, texto sobrio) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@300&family=Stack+Sans+Text:wght@400;500&display=swap" />
 
   <link rel="stylesheet" href="css/style.css" />
   <!-- Scripts clásicos (no type="module"): así funciona también abriendo el archivo con doble clic -->
+  <script>document.documentElement.classList.add('js');</script>
   <script defer src="https://cdn.jsdelivr.net/npm/vue@3.5.13/dist/vue.global.prod.js"></script>
   <script defer src="config.js"></script>
   <script defer src="data/programacion.js"></script>
@@ -38,31 +39,120 @@
 </head>
 <body>
 
-<!-- Íconos (trazos propios, 24×24). Se usan con <svg><use href="#i-play"/></svg> -->
+<!-- Íconos (trazos propios). Se usan con <svg><use href="#i-play"/></svg> -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7.5 4.6v14.8a1 1 0 0 0 1.52.85l12-7.4a1 1 0 0 0 0-1.7l-12-7.4A1 1 0 0 0 7.5 4.6z"/></symbol>
-  <symbol id="i-pause" viewBox="0 0 24 24"><g fill="currentColor"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></g></symbol>
-  <symbol id="i-vol" viewBox="0 0 24 24"><path fill="currentColor" d="M3.5 9.2v5.6h3.8l5.2 4.2V5L7.3 9.2z"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" d="M16 8.8a4.6 4.6 0 0 1 0 6.4M18.7 6.2a8.3 8.3 0 0 1 0 11.6"/></symbol>
-  <symbol id="i-mute" viewBox="0 0 24 24"><path fill="currentColor" d="M3.5 9.2v5.6h3.8l5.2 4.2V5L7.3 9.2z"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" d="M16 9.5l5 5M21 9.5l-5 5"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></g></symbol>
-  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M4.2 19.8l1.1-3.7A8.2 8.2 0 1 1 8.2 18.8z"/><path fill="currentColor" d="M9.3 8.1c.2-.3.5-.4.8-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.2 0 .5-.1.6l-.5.6c-.1.1-.1.3 0 .5.6 1 1.4 1.8 2.4 2.3.2.1.4.1.5 0l.6-.6c.2-.2.4-.2.6-.1l1.4.7c.3.1.4.3.4.5 0 .5-.2 1.1-.6 1.4-.5.4-1.2.6-1.9.4-1.6-.4-3-1.3-4.1-2.5-1-1-1.7-2.2-2-3.5-.2-.7 0-1.4.5-1.8z"/></symbol>
-  <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M14 8.5h2.5V5H14c-2.2 0-3.5 1.5-3.5 3.7V11H8v3.3h2.5V21h3.3v-6.7h2.4l.5-3.3h-2.9V9.2c0-.4.3-.7.7-.7z"/></symbol>
-  <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
-  <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.75"/><path fill="currentColor" d="M10 9.2v5.6l4.8-2.8z"/></symbol>
-  <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M14 3.5v11.2a3.6 3.6 0 1 1-3.6-3.6M14 3.5c.4 2.6 2.3 4.3 5 4.4"/></symbol>
-  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" d="M4.5 4.5l15 15M19.5 4.5l-15 15"/></symbol>
-  <symbol id="i-link" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.2v15.6L20 12z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><g fill="currentColor"><rect x="6" y="4.5" width="4" height="15"/><rect x="14" y="4.5" width="4" height="15"/></g></symbol>
+  <symbol id="i-vol" viewBox="0 0 24 24"><path fill="currentColor" d="M3.5 9.2v5.6h3.8l5.2 4.2V5L7.3 9.2z"/><path fill="none" stroke="currentColor" stroke-width="1.75" d="M16 8.8a4.6 4.6 0 0 1 0 6.4M18.7 6.2a8.3 8.3 0 0 1 0 11.6"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24"><path fill="currentColor" d="M3.5 9.2v5.6h3.8l5.2 4.2V5L7.3 9.2z"/><path fill="none" stroke="currentColor" stroke-width="1.75" d="M16 9.5l5 5M21 9.5l-5 5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="4" d="M8 40L40 8M16 8h24v24"/></symbol>
+  <!-- Vinilo dibujado: surcos y etiqueta roja; el ícono de la marca va encima (ver .vinyl) -->
+  <symbol id="vinyl" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="100" fill="#0A0A0A"/>
+    <circle cx="100" cy="100" r="98" fill="none" stroke="#9A9A9A" stroke-width="2"/>
+    <g fill="none" stroke="#262626" stroke-width="1">
+      <circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="88"/><circle cx="100" cy="100" r="84"/>
+      <circle cx="100" cy="100" r="80"/><circle cx="100" cy="100" r="76"/><circle cx="100" cy="100" r="70"/>
+      <circle cx="100" cy="100" r="66"/><circle cx="100" cy="100" r="62"/><circle cx="100" cy="100" r="58"/>
+      <circle cx="100" cy="100" r="52"/><circle cx="100" cy="100" r="48"/><circle cx="100" cy="100" r="44"/>
+    </g>
+    <g fill="none" stroke="#3A3A3A" stroke-width="1.5"><circle cx="100" cy="100" r="73"/><circle cx="100" cy="100" r="55"/></g>
+    <circle cx="100" cy="100" r="36" fill="#FF0000"/>
+  </symbol>
 </svg>
+
+<!-- ═════════ Piezas compartidas entre páginas (componentes Vue) ═════════ -->
+
+<!-- Póster de décadas: la de la canción que suena se enciende en rojo -->
+<script type="text/x-template" id="tpl-decades">
+  <section class="ch ch-paper decades" aria-labelledby="dec-h">
+    <h2 id="dec-h" class="sr-only">Las décadas que suenan en CLASSIC</h2>
+    <ol class="poster wrap">
+      <li v-for="d in DECADES" :key="d.id" :class="{ now: liveDecade === d.id }" data-reveal>
+        <span class="poster-word">Los {{ d.id }}</span>
+        <span class="poster-fact" v-if="liveDecade === d.id"><span class="live-dot on"></span>Sonando ahora: {{ p.title }}</span>
+        <span class="poster-fact" v-else>{{ d.fact }}</span>
+      </li>
+    </ol>
+  </section>
+</script>
+
+<!-- Así sonaba: fotos de archivo como copias impresas, al costado del titular -->
+<script type="text/x-template" id="tpl-prints">
+  <section class="ch ch-red prints" aria-labelledby="prints-h">
+    <div class="wrap prints-grid">
+      <h2 id="prints-h" class="prints-title lines">
+        <span class="line"><span data-line style="--i:0">Así</span></span>
+        <span class="line"><span data-line style="--i:1">sonaba</span></span>
+      </h2>
+      <p class="prints-note" data-reveal>Disquerías, rockolas y tocadiscos: el mundo donde nacieron las canciones que pasamos.</p>
+      <div class="prints-stack">
+        <figure class="print print-a" data-reveal><img src="assets/archivo/disqueria-1963.webp" alt="Una disquería de 1963 llena de gente revisando discos" width="900" height="1200" loading="lazy" /></figure>
+        <figure class="print print-b" data-reveal><img src="assets/archivo/rockola-wurlitzer-1100.webp" alt="Rockola Wurlitzer 1100 iluminada, con los discos a la vista" width="900" height="1200" loading="lazy" /></figure>
+        <figure class="print print-c" data-reveal><img src="assets/archivo/tocadiscos-zenith.webp" alt="Tocadiscos portátil Zenith de 33 y 45 revoluciones" width="900" height="1200" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+</script>
+
+<!-- Las voces: panel negro con foto recortada en forma de disco -->
+<script type="text/x-template" id="tpl-voices">
+  <section class="ch ch-paper voices" aria-labelledby="voices-h">
+    <div class="panel">
+      <h2 id="voices-h" class="panel-title" data-reveal>Las voces<br />de CLASSIC</h2>
+      <figure class="panel-photo" data-reveal>
+        <img src="assets/archivo/estudio-radio-1950s.webp" alt="Un estudio de radio de los años 50 conservado en un museo" width="1400" height="933" loading="lazy" />
+        <span class="panel-hole" aria-hidden="true"></span>
+      </figure>
+      <div class="panel-text">
+        <div v-for="h in hosts" :key="h.nombre" class="host" data-reveal>
+          <h3>{{ h.nombre }}</h3>
+          <p>{{ h.descripcion }}</p>
+        </div>
+        <a class="btn btn-red" href="#/contacto" data-reveal>Pide tu canción</a>
+      </div>
+    </div>
+  </section>
+</script>
+
+<!-- Pide tu canción: tira de fotos + formulario de tres celdas que abre WhatsApp -->
+<script type="text/x-template" id="tpl-request">
+  <section class="ch ch-red request" aria-labelledby="req-h">
+    <div class="strip" aria-hidden="true">
+      <div class="strip-track">
+        <img v-for="(s, i) in STRIP.concat(STRIP)" :key="i" :src="s.src" alt="" :class="'s-' + s.shape" loading="lazy" />
+      </div>
+    </div>
+    <div class="wrap">
+      <component :is="level" id="req-h" class="req-title" tabindex="-1" data-reveal>Pide tu canción</component>
+      <form class="req-form" novalidate @submit.prevent="sendForm" data-reveal>
+        <div class="cell">
+          <label for="f-name" class="sr-only">Tu nombre</label>
+          <input id="f-name" v-model="form.name" placeholder="Tu nombre" autocomplete="name"
+                 :aria-invalid="!!form.errors.name" aria-describedby="f-name-err" />
+          <p id="f-name-err" class="cell-error" v-if="form.errors.name">{{ form.errors.name }}</p>
+        </div>
+        <div class="cell">
+          <label for="f-song" class="sr-only">Canción y artista</label>
+          <input id="f-song" v-model="form.message" placeholder="Canción y artista"
+                 :aria-invalid="!!form.errors.message" aria-describedby="f-song-err" />
+          <p id="f-song-err" class="cell-error" v-if="form.errors.message">{{ form.errors.message }}</p>
+        </div>
+        <button class="cell cell-send" type="submit">Enviar por WhatsApp</button>
+      </form>
+      <p class="req-note">Se abre WhatsApp con tu pedido listo. También puedes escribir a <a :href="'mailto:' + cfg.contact.email">{{ cfg.contact.email }}</a>.</p>
+    </div>
+  </section>
+</script>
 
 <div id="app" v-cloak>
   <a class="skip" href="#main" @click.prevent="focusMain">Saltar al contenido</a>
 
-  <!-- ═════════ Header ═════════ -->
-  <header class="site-header">
+  <!-- ═════════ Barra superior: marca y cuatro enlaces, del color del primer capítulo ═════════ -->
+  <header class="site-header" :class="'on-' + headerTone">
     <div class="wrap header-inner">
       <a href="#/" class="brand" :aria-label="cfg.name + ', inicio'">
-        <img :src="cfg.logos.header" alt="" class="brand-logo" width="819" height="222" />
+        <img :src="headerTone === 'ink' ? cfg.logos.header : 'assets/img/logo-negro.webp'" alt="" width="819" height="222" />
       </a>
       <nav aria-label="Principal">
         <ul class="nav">
@@ -78,198 +168,181 @@
 
     <!-- ═════════ Inicio ═════════ -->
     <template v-if="route === ''">
+      <!-- Hero: dos campos, blanco arriba y rojo abajo. La costura corta la segunda línea del titular. -->
       <section class="hero">
-        <div class="wrap hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow"><span class="live-dot" :class="{ on: p.playing }"></span>Radio online · En vivo las 24 horas</p>
-            <h1 tabindex="-1">Los clásicos de siempre... <span class="accent">siempre contigo.</span></h1>
-            <p class="lede">Las canciones que marcaron décadas, sonando ahora mismo. Dale play desde el celular, la compu o donde estés.</p>
-            <div class="hero-actions">
-              <button class="btn-live" :class="{ 'is-loading': p.loading }" @click="player.toggle()"
-                      :aria-label="p.playing || p.loading ? 'Pausar la radio' : 'Escuchar en vivo'">
-                <span class="btn-live-icon"><svg><use :href="p.playing || p.loading ? '#i-pause' : '#i-play'" /></svg></span>
-                <span>{{ p.playing ? 'Sonando en vivo' : p.loading ? 'Conectando…' : 'Escuchar en vivo' }}</span>
-              </button>
-              <a class="btn-ghost" href="#/programacion">Ver programación <svg><use href="#i-arrow" /></svg></a>
-            </div>
-            <p class="onair-line" v-if="current">
-              <span class="kicker">Al aire</span> {{ current.nombre }} <span class="muted">· hasta las {{ current.fin }}</span>
-            </p>
-          </div>
+        <div class="hero-paper"></div>
+        <div class="hero-red"></div>
 
-          <div class="hero-stage">
-            <div class="turntable" :class="{ spinning: p.playing }" aria-hidden="true">
-              <div class="vinyl"><div class="vinyl-label"><img :src="cfg.logos.icon" alt="" /></div></div>
-              <div class="vinyl-sheen"></div>
-            </div>
+        <h1 class="wl lines" tabindex="-1">
+          <span class="wl-ink">
+            <span class="line"><span data-line style="--i:0">Clásicos</span></span>
+            <span class="line"><span data-line style="--i:1">en vivo</span></span>
+          </span>
+          <span class="wl-accent" aria-hidden="true">
+            <span class="line"><span data-line style="--i:0">Clásicos</span></span>
+            <span class="line"><span data-line style="--i:1">en vivo</span></span>
+          </span>
+        </h1>
 
-            <div class="now-card" aria-label="Ahora suena" role="group">
-              <div class="np-art">
-                <img v-if="p.artwork" :src="p.artwork" alt="" width="64" height="64" />
-                <img v-else :src="cfg.logos.icon" alt="" width="64" height="64" />
-              </div>
-              <div class="np-text">
-                <p class="kicker">Ahora suena</p>
-                <template v-if="p.metaReady">
-                  <p class="np-title">{{ p.title }}</p>
-                  <p class="np-artist">{{ p.artist }}</p>
-                </template>
-                <template v-else>
-                  <span class="skel" style="width: 78%"></span>
-                  <span class="skel" style="width: 46%"></span>
-                </template>
-              </div>
-              <div class="eq eq-card" :class="eqClass" aria-hidden="true">
+        <p class="hero-sub">{{ cfg.slogan }} Radio online de los 60 a los 90, las 24 horas.</p>
+
+        <div class="hero-live">
+          <button class="play-big" :class="{ 'is-loading': p.loading }" @click="player.toggle()"
+                  :aria-label="p.playing || p.loading ? 'Pausar la radio' : 'Escuchar en vivo'">
+            <svg><use :href="p.playing || p.loading ? '#i-pause' : '#i-play'" /></svg>
+          </button>
+          <div class="np">
+            <template v-if="p.metaReady">
+              <p class="np-title">{{ p.title }}</p>
+              <p class="np-artist">{{ p.artist }}</p>
+            </template>
+            <template v-else><span class="skel" style="width: 14ch"></span><span class="skel" style="width: 9ch"></span></template>
+            <div class="np-status">
+              <div class="eq eq-hero" :class="eqClass" aria-hidden="true">
                 <span v-for="(b, i) in bars24" :key="i" :style="b"></span>
               </div>
+              <p>{{ p.playing ? 'Sonando en vivo' : p.loading ? 'Conectando…' : 'Toca play para escuchar' }}</p>
             </div>
           </div>
         </div>
+
+        <div class="hero-vinyl" :class="{ spinning: p.playing }" aria-hidden="true">
+          <div class="vinyl"><svg viewBox="0 0 200 200"><use href="#vinyl" /></svg><img :src="cfg.logos.icon" alt="" /></div>
+        </div>
       </section>
 
-      <section class="section wrap" v-if="hasShows">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Hoy, {{ DAY_LABELS[now.day] }}</p>
-            <h2>Lo que suena hoy</h2>
+      <!-- Qué es CLASSIC -->
+      <section class="ch ch-ink intro">
+        <div class="wrap intro-grid">
+          <div class="intro-text">
+            <p class="statement" data-reveal>Radio online de clásicos: de los 60 a los 90, elegidos uno por uno y sonando sin cortes, día y noche.</p>
+            <p class="intro-body" data-reveal>No hay nada que elegir ni que instalar. Dale play desde el celular o la computadora y deja que suene.</p>
           </div>
-          <a class="link-arrow" href="#/programacion">Programación completa <svg><use href="#i-arrow" /></svg></a>
+          <figure class="intro-clip" data-reveal>
+            <video src="assets/archivo/disco-78-girando.webm" poster="assets/archivo/disco-78-girando-poster.webp"
+                   muted loop playsinline autoplay preload="metadata" width="640" height="480" aria-hidden="true"></video>
+          </figure>
         </div>
-        <show-list :shows="todayShows" :now="now"></show-list>
       </section>
 
-      <section class="section wrap" v-if="hosts.length">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Al micrófono</p>
-            <h2>Las voces de {{ cfg.name }}</h2>
-          </div>
-          <a class="link-arrow" href="#/nosotros">Conócenos <svg><use href="#i-arrow" /></svg></a>
-        </div>
-        <host-list :hosts="hosts"></host-list>
-      </section>
+      <decade-list></decade-list>
+      <print-wall></print-wall>
+      <voices-panel></voices-panel>
+      <song-request level="h2"></song-request>
     </template>
 
-    <!-- ═════════ Sobre nosotros ═════════ -->
-    <section v-else-if="route === 'nosotros'" class="page wrap about">
-      <div class="about-head">
-        <p class="kicker">Sobre nosotros</p>
-        <h1 tabindex="-1">Una radio para los discos que nunca dejaron de sonar.</h1>
-      </div>
-      <div class="about-body">
-        <!-- TEXTO DE EJEMPLO: reemplazar con la historia real de la radio -->
-        <p class="lede">CLASSIC nació de una colección de discos que pasó de mano en mano y de una idea simple: que esas canciones tuvieran dónde seguir sonando.</p>
-        <p>Empezamos programando música para la familia y los amigos, y hoy transmitimos en vivo, día y noche, para quien quiera volver a escuchar los temas que acompañaron su vida. Sin apuro, sin ruido: buena música y la voz justa.</p>
-        <p>Cada canción que pasamos la elegimos a mano. Algunas te van a llevar a una fiesta de los setenta, otras a la radio de la cocina de tu abuela. Todas tienen algo en común: siguen sonando bien.</p>
-        <blockquote class="pull">“{{ cfg.slogan }}”</blockquote>
-        <dl class="decades">
-          <div><dt>60s</dt><dd>Baladas, twist y la invasión británica</dd></div>
-          <div><dt>70s</dt><dd>Soul, disco y los grandes cantautores</dd></div>
-          <div><dt>80s</dt><dd>Pop, new wave y las baladas en español</dd></div>
-          <div><dt>90s</dt><dd>Los éxitos que cerraron el siglo</dd></div>
-        </dl>
-      </div>
-      <div class="about-hosts" v-if="hosts.length">
-        <h2>Las voces de {{ cfg.name }}</h2>
-        <host-list :hosts="hosts"></host-list>
-      </div>
-    </section>
+    <!-- ═════════ Nosotros ═════════ -->
+    <template v-else-if="route === 'nosotros'">
+      <section class="ch ch-ink story">
+        <div class="wrap story-grid">
+          <h1 class="story-title" tabindex="-1" data-reveal>Nuestra historia</h1>
+          <div class="story-body">
+            <!-- TEXTO DE EJEMPLO: reemplazar con la historia real de la radio -->
+            <p class="statement" data-reveal>CLASSIC nació de una colección de discos que pasó de mano en mano y de una idea simple: que esas canciones tuvieran dónde seguir sonando.</p>
+            <p data-reveal>Empezamos programando música para la familia y los amigos, y hoy transmitimos en vivo, día y noche, para quien quiera volver a escuchar los temas que acompañaron su vida. Sin apuro, sin ruido: buena música y la voz justa.</p>
+            <p data-reveal>Cada canción la elegimos a mano. Algunas te van a llevar a una fiesta de los setenta, otras a la radio de la cocina de tu abuela. Todas tienen algo en común: siguen sonando bien.</p>
+          </div>
+        </div>
+      </section>
+      <print-wall></print-wall>
+      <voices-panel></voices-panel>
+    </template>
 
     <!-- ═════════ Programación ═════════ -->
-    <section v-else-if="route === 'programacion'" class="page wrap">
-      <div class="page-head">
-        <p class="kicker">Programación</p>
-        <h1 tabindex="-1">Qué suena y cuándo</h1>
-        <p class="muted" v-if="hasShows">Horarios de {{ tzLabel }}. Fuera de estos programas, suena música continua.</p>
-      </div>
-      <div v-if="!hasShows" class="empty empty-lg">
-        <strong>Música continua, las 24 horas</strong>
-        <p>Por ahora no hay programas con horario fijo: suenan los clásicos de siempre, sin interrupciones. Pronto anunciaremos la programación.</p>
-      </div>
-      <template v-else>
-      <div class="days" role="group" aria-label="Elegir día">
-        <button v-for="d in DAYS" :key="d" type="button" :aria-pressed="day === d" @click="day = d">
-          {{ DAY_LABELS[d] }}<span v-if="d === now.day" class="sr-only"> (hoy)</span><i v-if="d === now.day" aria-hidden="true"></i>
-        </button>
-      </div>
-      <show-list :shows="dayShows" :now="now"></show-list>
-      </template>
-    </section>
+    <template v-else-if="route === 'programacion'">
+      <section class="ch ch-paper sched">
+        <div class="wrap">
+          <h1 class="sched-title" tabindex="-1" data-reveal>Programación</h1>
+          <p v-if="!hasShows" class="statement" data-reveal>Por ahora, música continua las 24 horas: suenan los clásicos de siempre, sin interrupciones. Pronto anunciaremos programas y horarios.</p>
+          <template v-else>
+            <p class="sched-note" data-reveal>Horarios de {{ tzLabel }}. Fuera de estos programas, suena música continua.</p>
+            <div class="days" role="group" aria-label="Elegir día">
+              <button v-for="d in DAYS" :key="d" type="button" :aria-pressed="day === d" @click="day = d">
+                {{ DAY_LABELS[d] }}<span v-if="d === now.day"> (hoy)</span>
+              </button>
+            </div>
+            <ol class="shows" v-if="dayShows.length">
+              <li v-for="s in dayShows" :key="s.nombre + s.inicio" :class="{ onair: onAir(s, now) }">
+                <span class="show-time">{{ s.inicio }}–{{ s.fin }}</span>
+                <span class="show-name">{{ s.nombre }}<span v-if="s.conductor" class="show-host"> con {{ s.conductor }}</span></span>
+                <span class="show-desc">{{ s.descripcion }}</span>
+                <span v-if="onAir(s, now)" class="show-badge">Al aire</span>
+              </li>
+            </ol>
+            <p v-else class="statement">Este día suena música continua, sin programas.</p>
+          </template>
+        </div>
+      </section>
+      <decade-list></decade-list>
+    </template>
 
     <!-- ═════════ Contacto ═════════ -->
-    <section v-else-if="route === 'contacto'" class="page wrap contact">
-      <div class="contact-info">
-        <p class="kicker">Contacto</p>
-        <h1 tabindex="-1">Pide tu canción o salúdanos.</h1>
-        <p class="muted">La forma más rápida es WhatsApp. También leemos todos los correos.</p>
-        <a class="btn-live btn-wa" :href="waLink()" target="_blank" rel="noopener">
-          <span class="btn-live-icon"><svg><use href="#i-whatsapp" /></svg></span>
-          <span>Escribir por WhatsApp</span>
-        </a>
-        <ul class="contact-list">
-          <li><svg><use href="#i-whatsapp" /></svg><a :href="waLink()" target="_blank" rel="noopener">{{ cfg.contact.whatsappLabel }}</a></li>
-          <li><svg><use href="#i-mail" /></svg><a :href="'mailto:' + cfg.contact.email">{{ cfg.contact.email }}</a></li>
+    <template v-else-if="route === 'contacto'">
+      <song-request level="h1"></song-request>
+      <section class="ch ch-ink channels" aria-labelledby="ch-h">
+        <h2 id="ch-h" class="sr-only">Otras formas de contacto</h2>
+        <ul class="poster wrap">
+          <li data-reveal><a class="poster-word" :href="waLink()" target="_blank" rel="noopener">WhatsApp</a><span class="poster-fact">{{ cfg.contact.whatsappLabel }}</span></li>
+          <li data-reveal><a class="poster-word" :href="'mailto:' + cfg.contact.email">Correo</a><span class="poster-fact">{{ cfg.contact.email }}</span></li>
+          <li v-for="s in cfg.socials" :key="s.url" data-reveal><a class="poster-word" :href="s.url" target="_blank" rel="noopener">{{ s.label }}</a><span class="poster-fact">Síguenos</span></li>
         </ul>
-        <ul class="socials" aria-label="Redes sociales">
-          <li v-for="s in cfg.socials" :key="s.url">
-            <a :href="s.url" target="_blank" rel="noopener" :aria-label="s.label"><svg><use :href="'#i-' + icon(s.type)" /></svg></a>
-          </li>
-        </ul>
-      </div>
-
-      <form class="contact-form" novalidate @submit.prevent="sendForm">
-        <h2>Mándanos un mensaje</h2>
-        <p class="muted">Se abre WhatsApp con tu mensaje listo para enviar.</p>
-        <div class="field">
-          <label for="f-name">Tu nombre</label>
-          <input id="f-name" v-model="form.name" autocomplete="name" :aria-invalid="!!form.errors.name" aria-describedby="f-name-err" />
-          <p id="f-name-err" class="field-error" v-if="form.errors.name">{{ form.errors.name }}</p>
-        </div>
-        <div class="field">
-          <label for="f-msg">Mensaje</label>
-          <textarea id="f-msg" v-model="form.message" rows="5" :aria-invalid="!!form.errors.message" aria-describedby="f-msg-hint f-msg-err"></textarea>
-          <p id="f-msg-hint" class="field-hint">Si pides una canción, dinos el tema y el artista.</p>
-          <p id="f-msg-err" class="field-error" v-if="form.errors.message">{{ form.errors.message }}</p>
-        </div>
-        <button class="btn-solid" type="submit">Enviar por WhatsApp <svg><use href="#i-arrow" /></svg></button>
-      </form>
-    </section>
+      </section>
+    </template>
   </main>
 
-  <!-- ═════════ Footer ═════════ -->
+  <!-- ═════════ Footer de mosaicos ═════════ -->
   <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <a href="#/" class="brand" :aria-label="cfg.name + ', inicio'">
-          <img :src="cfg.logos.header" alt="" class="brand-logo" width="819" height="222" />
-        </a>
-        <p class="footer-slogan">{{ cfg.slogan }}</p>
+    <div class="tiles">
+      <div class="tile t-statement">
+        <p class="t-lead">{{ cfg.slogan }}</p>
+        <p class="t-small">© {{ year }} {{ cfg.name }}. Radio online.</p>
       </div>
-      <nav aria-label="Pie de página">
-        <ul class="footer-nav">
+      <nav class="tile t-nav" aria-label="Pie de página">
+        <ul>
           <li v-for="n in NAV" :key="n.id"><a :href="'#/' + n.id">{{ n.label }}</a></li>
+          <li v-for="s in cfg.socials" :key="s.url"><a :href="s.url" target="_blank" rel="noopener">{{ s.label }}</a></li>
         </ul>
       </nav>
-      <ul class="socials" aria-label="Redes sociales">
-        <li v-for="s in cfg.socials" :key="s.url">
-          <a :href="s.url" target="_blank" rel="noopener" :aria-label="s.label"><svg><use :href="'#i-' + icon(s.type)" /></svg></a>
-        </li>
-        <li><a :href="waLink()" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-whatsapp" /></svg></a></li>
-      </ul>
+      <div class="tile t-time">
+        <p>En {{ tzLabel }} son las</p>
+        <p class="t-lead">{{ clock }}</p>
+      </div>
+      <div class="tile t-mail">
+        <a class="t-mail-addr" :href="'mailto:' + cfg.contact.email">{{ cfg.contact.email }}</a>
+        <a :href="waLink()" target="_blank" rel="noopener">WhatsApp {{ cfg.contact.whatsappLabel }}</a>
+      </div>
+      <div class="tile t-word">
+        <img src="assets/img/logo-negro-lema.webp" :alt="cfg.name + ': ' + cfg.slogan" width="819" height="222" loading="lazy" />
+      </div>
+      <button class="tile t-play" type="button" @click="player.toggle()">
+        <span class="t-lead">{{ p.playing ? 'Pausar la radio' : 'Escuchar en vivo' }}</span>
+        <svg class="t-arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+      </button>
+      <p class="tile t-credits">Imágenes y video de archivo, vía Wikimedia Commons y en blanco y negro:
+        <a href="https://commons.wikimedia.org/wiki/File:US_Record_Store_1963.jpg">“US Record Store 1963”</a>, Marion S. Trikosko, dominio público;
+        <a href="https://commons.wikimedia.org/wiki/File:Wurlitzer_1100_Jukebox.jpg">“Wurlitzer 1100 Jukebox”</a>, Manro Classic Museum, CC0;
+        <a href="https://commons.wikimedia.org/wiki/File:Portable_Philips_LP-_record_player.jpg">“Portable Philips LP record player”</a>, Amitbalani, CC0;
+        <a href="https://commons.wikimedia.org/w/index.php?curid=146621056">“Jukebox Wurlitzer 600A 1938”</a>, Museo del disco d'epoca, CC0;
+        <a href="https://commons.wikimedia.org/w/index.php?curid=33716713">“Zenith Model B505B Phonograph”</a>, r. nial bradshaw, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>;
+        <a href="https://commons.wikimedia.org/wiki/File:Buying_Old_Records_(Unsplash).jpg">“Buying Old Records”</a>, Seth Doyle, CC0;
+        <a href="https://commons.wikimedia.org/w/index.php?curid=19738633">“EMI RM-1B &amp; HB-1E microphones”</a>, MrJamesAckerley, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>;
+        <a href="https://commons.wikimedia.org/w/index.php?curid=115337874">“KCLV &amp; KTOM Radio Station Studio exhibit”</a>, Greg Gjerdingen, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>;
+        <a href="https://commons.wikimedia.org/w/index.php?curid=45856828">“Vintage Sony TR-730 Transistor Radio”</a>, Joe Haupt, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>;
+        <a href="https://commons.wikimedia.org/wiki/File:78tours_gros_plan.ogv">“78tours gros plan”</a> (video), Zecas, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>.
+      </p>
     </div>
-    <p class="wrap footer-copy">© {{ year }} {{ cfg.name }} · Radio online</p>
   </footer>
 
   <!-- ═════════ Reproductor persistente ═════════ -->
   <section class="playerbar" aria-label="Reproductor de la radio">
-    <div class="wrap pb-inner">
+    <div class="pb-inner">
       <button class="pb-play" :class="{ 'is-loading': p.loading }" @click="player.toggle()"
               :aria-label="p.playing || p.loading ? 'Pausar la radio' : 'Reproducir la radio en vivo'">
         <svg><use :href="p.playing || p.loading ? '#i-pause' : '#i-play'" /></svg>
       </button>
 
       <div class="pb-disc" :class="{ spinning: p.playing }" aria-hidden="true">
-        <div class="vinyl"><div class="vinyl-label"><img :src="p.artwork || cfg.logos.icon" alt="" /></div></div>
+        <div class="vinyl"><svg viewBox="0 0 200 200"><use href="#vinyl" /></svg><img :src="p.artwork || cfg.logos.icon" alt="" /></div>
       </div>
 
       <div class="pb-meta">
@@ -303,6 +376,6 @@
   </section>
 </div>
 
-<noscript><p style="padding:2rem;color:#fff">Activa JavaScript para escuchar CLASSIC en vivo.</p></noscript>
+<noscript><p style="padding:2rem">Activa JavaScript para escuchar CLASSIC en vivo.</p></noscript>
 </body>
 </html>

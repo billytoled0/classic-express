@@ -1,4 +1,4 @@
-// Programación y conductores. Se edita aquí (es JS para que el sitio funcione
+// Programación y conductores. (Las descripciones de los conductores son TEXTO DE EJEMPLO.) Se edita aquí (es JS para que el sitio funcione
 // también abriendo index.html con doble clic, sin servidor).
 //
 // programas: dias = lun mar mie jue vie sab dom. Horas HH:MM en la zona horaria
@@ -10,11 +10,11 @@ const CLASSIC_DATA = {
   "conductores": [
     {
       "nombre": "Willy Toledo",
-      "foto": "assets/img/locutor.svg"
+      "descripcion": "Al micrófono de CLASSIC. Presenta los clásicos con la historia que hay detrás de cada canción."
     },
     {
       "nombre": "Jaime Valencia",
-      "foto": "assets/img/locutor.svg"
+      "descripcion": "Al micrófono de CLASSIC. Recibe los pedidos de los oyentes y los hace sonar."
     }
   ],
   "programas": []

@@ -1,25 +1,31 @@
 {
  "url": "index.html",
- "at": "2026-10-14T20:19:54.410Z",
- "allow": [],
+ "at": "2026-10-14T20:47:18.194Z",
+ "allow": [
+  "covered-text"
+ ],
  "viewports": [
   {
    "width": 1440,
    "height": 900,
    "load": "load",
-   "screens": 3,
+   "screens": 7,
    "filled": [
-    1,
-    0.72,
-    0.72
+    0.47,
+    0.91,
+    0.62,
+    0.99,
+    0.93,
+    0.92,
+    0.88
    ],
    "motion": {
-    "elements": 5,
-    "css": 5,
-    "transitions": 0,
+    "elements": 32,
+    "css": 15,
+    "transitions": 17,
     "scripted": 0,
-    "videos": 0,
-    "playingVideos": 0
+    "videos": 1,
+    "playingVideos": 1
    },
    "metrics": {
     "viewport": {
@@ -27,23 +33,30 @@
      "h": 900
     },
     "page": {
-     "height": 2236,
-     "screens": 2.5,
-     "words": 88,
-     "img": 7,
-     "video": 0,
+     "height": 5675,
+     "screens": 6.3,
+     "words": 340,
+     "img": 26,
+     "video": 1,
      "canvas": 0,
-     "svg": 9,
-     "sections": 3,
-     "horizontalOverflow": 10,
+     "svg": 7,
+     "sections": 7,
+     "horizontalOverflow": 0,
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 1,
-     "videoCount": 0,
+     "realPictures": 19,
+     "videoCount": 1,
      "uiPictures": 0,
      "pictureSamples": [
-      "icon.webp"
+      "icon.webp",
+      "disqueria-1963.webp",
+      "rockola-wurlitzer-1100.webp",
+      "tocadiscos-zenith.webp",
+      "estudio-radio-1950s.webp",
+      "buscando-discos.webp",
+      "radio-sony-tr730.webp",
+      "disqueria-1963.webp"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -51,269 +64,522 @@
      "emoji": []
     },
     "hero": {
-     "text": "Los clásicos de siempre... siempre contigo.",
+     "text": "Clásicos en vivo Clásicos en vivo",
      "words": 6,
-     "chars": 43,
-     "lines": 3,
-     "size": 70.4,
-     "vw": 4.9,
-     "font": "Outfit",
-     "weight": 800,
-     "tracking": -0.025,
-     "leading": 1.02,
+     "chars": 33,
+     "lines": 2,
+     "size": 129.6,
+     "vw": 9,
+     "font": "Stack Sans Headline",
+     "weight": 300,
+     "tracking": -0.022,
+     "leading": 1,
      "upper": false,
      "italic": false,
      "mono": false,
-     "align": "left",
-     "position": "left",
-     "widthRatio": 0.43,
-     "top": 271,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.77,
+     "top": 254,
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
-     "text": "Los clásicos de siempre... siempre contigo.",
+     "text": "Clásicos en vivo Clásicos en vivo",
      "words": 6,
-     "lines": 3,
-     "size": 70.4,
-     "font": "Outfit"
+     "lines": 2,
+     "size": 129.6,
+     "font": "Stack Sans Headline"
     },
     "headings": [
      {
-      "text": "Los clásicos de siempre... siempre contigo.",
+      "text": "Clásicos en vivo Clásicos en vivo",
       "words": 6,
-      "chars": 43,
-      "lines": 3,
-      "size": 70.4,
-      "vw": 4.9,
-      "font": "Outfit",
-      "weight": 800,
-      "tracking": -0.025,
-      "leading": 1.02,
+      "chars": 33,
+      "lines": 2,
+      "size": 129.6,
+      "vw": 9,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 254,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Everybody's Talkin'",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.43,
-      "top": 271,
-      "tag": "h1",
-      "kind": "heading"
+      "widthRatio": 0.27,
+      "top": 684,
+      "tag": "p",
+      "kind": "statement"
      },
      {
-      "text": "Las voces de CLASSIC",
-      "words": 4,
-      "chars": 20,
+      "text": "Radio online de clásicos: de los 60 a los 90, elegidos uno por uno y sonando sin cortes, día y noche.",
+      "words": 21,
+      "chars": 101,
+      "lines": 3,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.3,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.56,
+      "top": 1111,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Los 60",
+      "words": 2,
+      "chars": 6,
       "lines": 1,
-      "size": 38.4,
-      "vw": 2.7,
-      "font": "Outfit",
-      "weight": 800,
-      "tracking": -0.025,
-      "leading": 1.02,
+      "size": 129.6,
+      "vw": 9,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.27,
+      "top": 1704,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Los 70",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 129.6,
+      "vw": 9,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.98,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
       "position": "left",
       "widthRatio": 0.26,
-      "top": 957,
+      "top": 1831,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Los 80",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 129.6,
+      "vw": 9,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.27,
+      "top": 1958,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Los 90",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 129.6,
+      "vw": 9,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.27,
+      "top": 2085,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Así sonaba",
+      "words": 2,
+      "chars": 10,
+      "lines": 2,
+      "size": 129.6,
+      "vw": 9,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 2388,
       "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Las voces de CLASSIC",
+      "words": 4,
+      "chars": 20,
+      "lines": 2,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.5,
+      "top": 3268,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Willy Toledo",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.31,
+      "top": 3276,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Jaime Valencia",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.31,
+      "top": 3448,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Pide tu canción",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.97,
+      "top": 4426,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Los clásicos de siempre... siempre contigo.",
+      "words": 6,
+      "chars": 43,
+      "lines": 3,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.29,
+      "top": 4888,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "15:47",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.13,
+      "top": 5048,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Escuchar en vivo",
+      "words": 3,
+      "chars": 16,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.32,
+      "top": 5121,
+      "tag": "button",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 2,
+     "count": 15,
      "maxLines": 3,
-     "over2Lines": 1,
-     "statements": 0,
-     "centered": 0,
-     "medianWords": 4,
+     "over2Lines": 0,
+     "statements": 8,
+     "centered": 1,
+     "medianWords": 2,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
-       "family": "Geist",
-       "share": 0.7,
+       "family": "Stack Sans Text",
+       "share": 0.95,
        "mono": false
       },
       {
-       "family": "Outfit",
-       "share": 0.3,
+       "family": "Stack Sans Headline",
+       "share": 0.05,
        "mono": false
       }
      ],
      "familyCount": 2,
      "sizes": [
-      11,
-      12,
       14,
-      15,
-      16,
-      18,
       19,
-      20,
-      22,
-      38,
-      70
+      36,
+      64,
+      130
      ],
-     "sizeCount": 11,
+     "sizeCount": 5,
      "notLoaded": [],
      "body": {
-      "font": "Geist",
-      "size": 18,
-      "leading": 1.6,
-      "weight": 400,
+      "font": "Stack Sans Text",
+      "size": 19,
+      "leading": 1.5,
+      "weight": 500,
       "tracking": 0,
       "contrast": null
      },
-     "measureChars": 69,
+     "measureChars": 202,
      "max": {
-      "size": 70.4,
-      "vw": 4.9,
-      "font": "Outfit",
-      "text": "Los clásicos de siempre..."
+      "size": 129.6,
+      "vw": 9,
+      "font": "Stack Sans Headline",
+      "text": "Clásicos"
      },
      "monoShare": 0,
      "monoProseShare": 0,
      "monoFamilies": [],
      "monoSamples": [],
-     "microLabels": 3,
-     "microLabelShare": 0.057,
-     "microSamples": [
-      "Ahora suena",
-      "Al micrófono",
-      "En vivo"
-     ],
-     "upperShare": 0.06,
-     "centerShare": 0.03,
-     "smallText": 1
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.03,
+     "centerShare": 0.07,
+     "smallText": 0
     },
-    "eyebrows": [
-     {
-      "text": "Radio online · En vivo las 24 horas",
-      "above": "Los clásicos de siempre... siempre conti",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 13.6,
-      "top": 228
-     },
-     {
-      "text": "Al micrófono",
-      "above": "Las voces de CLASSIC",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 12,
-      "top": 933
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#0a0a0a",
+     "bodyBg": "#fffefe",
      "bodyBgHsl": {
       "h": 0,
-      "s": 0,
-      "l": 0.04
+      "s": 1,
+      "l": 1
      },
-     "dark": true,
-     "sectionBgs": [],
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fffefe",
+       "top": 72,
+       "hsl": {
+        "h": 0,
+        "s": 1,
+        "l": 1
+       }
+      },
+      {
+       "color": "#fe0100",
+       "top": 448,
+       "hsl": {
+        "h": 0,
+        "s": 1,
+        "l": 0.5
+       }
+      },
+      {
+       "color": "#0b0b0a",
+       "top": 824,
+       "hsl": {
+        "h": 60,
+        "s": 0.05,
+        "l": 0.04
+       }
+      }
+     ],
      "textColors": [
       {
-       "color": "#fefeff",
+       "color": "#fffefe",
+       "share": 0.68
+      },
+      {
+       "color": "#0b0b0a",
        "share": 0.31
       },
       {
-       "color": "#9a9b9b",
-       "share": 0.26
-      },
-      {
-       "color": "#c9c9c7",
-       "share": 0.21
-      },
-      {
-       "color": "#ff0000",
-       "share": 0.09
-      },
-      {
-       "color": "#8a8a8a",
-       "share": 0.06
+       "color": "#fe0100",
+       "share": 0.01
       }
      ],
      "button": {
-      "bg": "#fefeff",
+      "bg": "#0b0b0a",
       "hsl": {
-       "h": 240,
-       "s": 1,
-       "l": 1
+       "h": 60,
+       "s": 0.05,
+       "l": 0.04
       },
-      "fg": "#0a0a0a"
+      "fg": "#fffefe"
      },
      "lowContrast": []
     },
     "buttons": {
-     "count": 3,
-     "inHero": 3,
-     "radius": "pill",
-     "height": 46,
-     "withShadow": 1,
+     "count": 2,
+     "inHero": 1,
+     "radius": 0,
+     "height": 53,
+     "withShadow": 0,
      "withGradient": 0,
      "mono": 0,
      "upper": 0,
      "heroLabels": [
-      "Saltar al contenido",
-      "Escuchar en vivo",
-      "Ver programación"
+      "Saltar al contenido"
      ]
     },
     "surfaces": {
-     "shadowStatic": 4,
-     "shadowOverlay": 2,
-     "shadowSamples": [
-      "button.btn-live → rgba(255, 0, 0, 0.55) 0px 14px 30px -14px, rgba(255, 255, 255, 0.18) 0px 1px 0px",
-      "div.vinyl → rgb(12, 12, 12) 0px 0px 0px 6px inset, rgba(0, 0, 0, 0.9) 0px 40px 80px -30px",
-      "div.vinyl-label → rgba(0, 0, 0, 0.4) 0px 0px 0px 2px",
-      "div.now-card → rgba(255, 255, 255, 0.07) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.9) 0px 30px 60p"
-     ],
-     "gradients": 2,
-     "scrims": 2,
-     "gradientSamples": [
-      "section.hero → radial-gradient(55% 45% at 88% 30%, rgba(255, 0, 0, 0.13), rgba(0, 0, 0, 0) 70%), radial-gradient(40% 40% at 0",
-      "footer.site-footer → linear-gradient(rgb(13, 13, 13), rgb(10, 10, 10))"
-     ],
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
      "gradientText": 0,
-     "hairlines": 3,
-     "hairlineSamples": [
-      "header.site-header 1440px",
-      "footer.site-footer 1440px",
-      "section.playerbar 1440px"
-     ],
-     "outlinedBoxes": 1,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
      "dashed": 0,
-     "blurred": 3,
-     "roundedBoxes": 2,
-     "boxRadius": 50,
-     "squareMedia": 0,
-     "roundedMedia": 2,
-     "mediaRadius": 18,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 14,
+     "roundedMedia": 1,
+     "mediaRadius": 50,
      "textShadow": 0,
      "cardRows": []
     },
-    "heroMedia": [],
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.15
+     }
+    ],
     "nav": {
      "links": 5,
-     "fixed": true,
-     "height": 69,
+     "fixed": false,
+     "height": 72,
      "floatingPill": false,
-     "blur": true
+     "blur": false
     },
     "fontsLoaded": [
-     "geist",
-     "outfit"
+     "stack sans headline",
+     "stack sans text"
     ]
    },
    "consoleErrors": []
@@ -322,19 +588,23 @@
    "width": 768,
    "height": 1024,
    "load": "load",
-   "screens": 3,
+   "screens": 7,
    "filled": [
-    1,
-    0.68,
-    0.71
+    0.53,
+    0.93,
+    0.76,
+    0.98,
+    0.93,
+    0.9,
+    0.99
    ],
    "motion": {
-    "elements": 5,
-    "css": 5,
-    "transitions": 0,
+    "elements": 32,
+    "css": 15,
+    "transitions": 17,
     "scripted": 0,
-    "videos": 0,
-    "playingVideos": 0
+    "videos": 1,
+    "playingVideos": 1
    },
    "metrics": {
     "viewport": {
@@ -342,291 +612,560 @@
      "h": 1024
     },
     "page": {
-     "height": 2436,
-     "screens": 2.4,
-     "words": 88,
-     "img": 7,
-     "video": 0,
+     "height": 6568,
+     "screens": 6.4,
+     "words": 340,
+     "img": 26,
+     "video": 1,
      "canvas": 0,
-     "svg": 9,
-     "sections": 3,
+     "svg": 7,
+     "sections": 7,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 0,
-     "videoCount": 0,
+     "realPictures": 17,
+     "videoCount": 1,
      "uiPictures": 0,
-     "pictureSamples": [],
+     "pictureSamples": [
+      "disqueria-1963.webp",
+      "rockola-wurlitzer-1100.webp",
+      "estudio-radio-1950s.webp",
+      "buscando-discos.webp",
+      "radio-sony-tr730.webp",
+      "disqueria-1963.webp",
+      "microfonos-estudio.webp",
+      "rockola-wurlitzer-1100.webp"
+     ],
      "blendText": 0,
      "sideScrollers": 0,
      "brokenImages": [],
      "emoji": []
     },
     "hero": {
-     "text": "Los clásicos de siempre... siempre contigo.",
+     "text": "Clásicos en vivo Clásicos en vivo",
      "words": 6,
-     "chars": 43,
-     "lines": 3,
-     "size": 54.7,
-     "vw": 7.1,
-     "font": "Outfit",
-     "weight": 800,
-     "tracking": -0.025,
-     "leading": 1.02,
+     "chars": 33,
+     "lines": 2,
+     "size": 72,
+     "vw": 9.4,
+     "font": "Stack Sans Headline",
+     "weight": 300,
+     "tracking": -0.022,
+     "leading": 1,
      "upper": false,
      "italic": false,
      "mono": false,
-     "align": "left",
-     "position": "left",
-     "widthRatio": 0.62,
-     "top": 153,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.8,
+     "top": 402,
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
-     "text": "Los clásicos de siempre... siempre contigo.",
+     "text": "Clásicos en vivo Clásicos en vivo",
      "words": 6,
-     "lines": 3,
-     "size": 54.7,
-     "font": "Outfit"
+     "lines": 2,
+     "size": 72,
+     "font": "Stack Sans Headline"
     },
     "headings": [
      {
-      "text": "Los clásicos de siempre... siempre contigo.",
+      "text": "Clásicos en vivo Clásicos en vivo",
       "words": 6,
-      "chars": 43,
-      "lines": 3,
-      "size": 54.7,
-      "vw": 7.1,
-      "font": "Outfit",
-      "weight": 800,
-      "tracking": -0.025,
-      "leading": 1.02,
+      "chars": 33,
+      "lines": 2,
+      "size": 72,
+      "vw": 9.4,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.8,
+      "top": 402,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Everybody's Talkin'",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 26.8,
+      "vw": 3.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.62,
-      "top": 153,
-      "tag": "h1",
+      "widthRatio": 0.48,
+      "top": 804,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Radio online de clásicos: de los 60 a los 90, elegidos uno por uno y sonando sin cortes, día y noche.",
+      "words": 21,
+      "chars": 101,
+      "lines": 3,
+      "size": 26.8,
+      "vw": 3.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.3,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 1068,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Los 60",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 72,
+      "vw": 9.4,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 1990,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Los 70",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 72,
+      "vw": 9.4,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.27,
+      "top": 2061,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Los 80",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 72,
+      "vw": 9.4,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 2131,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Los 90",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 72,
+      "vw": 9.4,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 2202,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Así sonaba",
+      "words": 2,
+      "chars": 10,
+      "lines": 2,
+      "size": 72,
+      "vw": 9.4,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 2448,
+      "tag": "h2",
       "kind": "heading"
      },
      {
       "text": "Las voces de CLASSIC",
       "words": 4,
       "chars": 20,
+      "lines": 2,
+      "size": 45.4,
+      "vw": 5.9,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3467,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Willy Toledo",
+      "words": 2,
+      "chars": 12,
       "lines": 1,
-      "size": 33,
-      "vw": 4.3,
-      "font": "Outfit",
-      "weight": 800,
-      "tracking": -0.025,
-      "leading": 1.02,
+      "size": 26.8,
+      "vw": 3.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.41,
-      "top": 1162,
+      "widthRatio": 0.54,
+      "top": 3603,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Jaime Valencia",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 26.8,
+      "vw": 3.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.54,
+      "top": 3737,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Pide tu canción",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 45.4,
+      "vw": 5.9,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 4747,
       "tag": "h2",
       "kind": "heading"
+     },
+     {
+      "text": "Escuchar en vivo",
+      "words": 3,
+      "chars": 16,
+      "lines": 1,
+      "size": 26.8,
+      "vw": 3.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.97,
+      "top": 5517,
+      "tag": "button",
+      "kind": "heading"
+     },
+     {
+      "text": "Los clásicos de siempre... siempre contigo.",
+      "words": 6,
+      "chars": 43,
+      "lines": 1,
+      "size": 26.8,
+      "vw": 3.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 5743,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "15:47",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 26.8,
+      "vw": 3.5,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.43,
+      "top": 6070,
+      "tag": "p",
+      "kind": "statement"
      }
     ],
     "headingSummary": {
-     "count": 2,
+     "count": 15,
      "maxLines": 3,
-     "over2Lines": 1,
-     "statements": 0,
-     "centered": 0,
-     "medianWords": 4,
+     "over2Lines": 0,
+     "statements": 8,
+     "centered": 1,
+     "medianWords": 2,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
-       "family": "Geist",
-       "share": 0.7,
+       "family": "Stack Sans Text",
+       "share": 0.95,
        "mono": false
       },
       {
-       "family": "Outfit",
-       "share": 0.3,
+       "family": "Stack Sans Headline",
+       "share": 0.05,
        "mono": false
       }
      ],
      "familyCount": 2,
      "sizes": [
-      11,
-      12,
-      14,
-      15,
-      16,
+      13,
       18,
-      19,
-      20,
-      22,
-      33,
-      55
+      27,
+      45,
+      72
      ],
-     "sizeCount": 11,
+     "sizeCount": 5,
      "notLoaded": [],
      "body": {
-      "font": "Geist",
-      "size": 18,
-      "leading": 1.6,
-      "weight": 400,
+      "font": "Stack Sans Text",
+      "size": 17.9,
+      "leading": 1.5,
+      "weight": 500,
       "tracking": 0,
       "contrast": null
      },
-     "measureChars": 69,
+     "measureChars": 112,
      "max": {
-      "size": 54.7,
-      "vw": 7.1,
-      "font": "Outfit",
-      "text": "Los clásicos de siempre..."
+      "size": 72,
+      "vw": 9.4,
+      "font": "Stack Sans Headline",
+      "text": "Clásicos"
      },
      "monoShare": 0,
      "monoProseShare": 0,
      "monoFamilies": [],
      "monoSamples": [],
-     "microLabels": 3,
-     "microLabelShare": 0.057,
-     "microSamples": [
-      "Ahora suena",
-      "Al micrófono",
-      "En vivo"
-     ],
-     "upperShare": 0.06,
-     "centerShare": 0.03,
-     "smallText": 1
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.03,
+     "centerShare": 0.07,
+     "smallText": 0
     },
-    "eyebrows": [
-     {
-      "text": "Radio online · En vivo las 24 horas",
-      "above": "Los clásicos de siempre... siempre conti",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 13.6,
-      "top": 109
-     },
-     {
-      "text": "Al micrófono",
-      "above": "Las voces de CLASSIC",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 12,
-      "top": 1138
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#0a0a0a",
+     "bodyBg": "#fffefe",
      "bodyBgHsl": {
       "h": 0,
-      "s": 0,
-      "l": 0.04
+      "s": 1,
+      "l": 1
      },
-     "dark": true,
-     "sectionBgs": [],
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fffefe",
+       "top": 72,
+       "hsl": {
+        "h": 0,
+        "s": 1,
+        "l": 1
+       }
+      },
+      {
+       "color": "#fe0100",
+       "top": 510,
+       "hsl": {
+        "h": 0,
+        "s": 1,
+        "l": 0.5
+       }
+      },
+      {
+       "color": "#0b0b0a",
+       "top": 948,
+       "hsl": {
+        "h": 60,
+        "s": 0.05,
+        "l": 0.04
+       }
+      }
+     ],
      "textColors": [
       {
-       "color": "#fefeff",
+       "color": "#fffefe",
+       "share": 0.68
+      },
+      {
+       "color": "#0b0b0a",
        "share": 0.31
       },
       {
-       "color": "#9a9b9b",
-       "share": 0.26
-      },
-      {
-       "color": "#c9c9c7",
-       "share": 0.21
-      },
-      {
-       "color": "#ff0000",
-       "share": 0.09
-      },
-      {
-       "color": "#8a8a8a",
-       "share": 0.06
+       "color": "#fe0100",
+       "share": 0.01
       }
      ],
      "button": {
-      "bg": "#fefeff",
+      "bg": "#0b0b0a",
       "hsl": {
-       "h": 240,
-       "s": 1,
-       "l": 1
+       "h": 60,
+       "s": 0.05,
+       "l": 0.04
       },
-      "fg": "#0a0a0a"
+      "fg": "#fffefe"
      },
      "lowContrast": []
     },
     "buttons": {
-     "count": 3,
-     "inHero": 3,
-     "radius": "pill",
-     "height": 46,
-     "withShadow": 1,
+     "count": 2,
+     "inHero": 1,
+     "radius": 0,
+     "height": 51,
+     "withShadow": 0,
      "withGradient": 0,
      "mono": 0,
      "upper": 0,
      "heroLabels": [
-      "Saltar al contenido",
-      "Escuchar en vivo",
-      "Ver programación"
+      "Saltar al contenido"
      ]
     },
     "surfaces": {
-     "shadowStatic": 4,
-     "shadowOverlay": 2,
-     "shadowSamples": [
-      "button.btn-live → rgba(255, 0, 0, 0.55) 0px 14px 30px -14px, rgba(255, 255, 255, 0.18) 0px 1px 0px",
-      "div.vinyl → rgb(12, 12, 12) 0px 0px 0px 6px inset, rgba(0, 0, 0, 0.9) 0px 40px 80px -30px",
-      "div.vinyl-label → rgba(0, 0, 0, 0.4) 0px 0px 0px 2px",
-      "div.now-card → rgba(255, 255, 255, 0.07) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.9) 0px 30px 60p"
-     ],
-     "gradients": 2,
-     "scrims": 2,
-     "gradientSamples": [
-      "section.hero → radial-gradient(55% 45% at 88% 30%, rgba(255, 0, 0, 0.13), rgba(0, 0, 0, 0) 70%), radial-gradient(40% 40% at 0",
-      "footer.site-footer → linear-gradient(rgb(13, 13, 13), rgb(10, 10, 10))"
-     ],
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
      "gradientText": 0,
-     "hairlines": 3,
-     "hairlineSamples": [
-      "header.site-header 768px",
-      "footer.site-footer 768px",
-      "section.playerbar 768px"
-     ],
-     "outlinedBoxes": 1,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
      "dashed": 0,
-     "blurred": 3,
-     "roundedBoxes": 1,
-     "boxRadius": 20,
-     "squareMedia": 0,
-     "roundedMedia": 2,
-     "mediaRadius": 18,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 13,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
      "textShadow": 0,
-     "cardRows": []
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 5889
+      }
+     ]
     },
-    "heroMedia": [],
+    "heroMedia": [
+     {
+      "type": "svg",
+      "ratio": 0.08
+     }
+    ],
     "nav": {
      "links": 5,
-     "fixed": true,
-     "height": 69,
+     "fixed": false,
+     "height": 72,
      "floatingPill": false,
-     "blur": true
+     "blur": false
     },
     "fontsLoaded": [
-     "geist",
-     "outfit"
+     "stack sans headline",
+     "stack sans text"
     ]
    },
    "consoleErrors": []
@@ -635,20 +1174,24 @@
    "width": 390,
    "height": 844,
    "load": "load",
-   "screens": 4,
+   "screens": 8,
    "filled": [
+    0.59,
     1,
-    0.83,
+    0.66,
     0.89,
-    0.87
+    0.94,
+    0.87,
+    1,
+    1
    ],
    "motion": {
-    "elements": 5,
-    "css": 5,
-    "transitions": 0,
+    "elements": 30,
+    "css": 13,
+    "transitions": 17,
     "scripted": 0,
-    "videos": 0,
-    "playingVideos": 0
+    "videos": 1,
+    "playingVideos": 1
    },
    "metrics": {
     "viewport": {
@@ -656,301 +1199,562 @@
      "h": 844
     },
     "page": {
-     "height": 3246,
-     "screens": 3.8,
-     "words": 88,
-     "img": 7,
-     "video": 0,
+     "height": 6095,
+     "screens": 7.2,
+     "words": 340,
+     "img": 26,
+     "video": 1,
      "canvas": 0,
-     "svg": 10,
-     "sections": 3,
+     "svg": 8,
+     "sections": 7,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
      "uiFragments": 0,
      "uiAbuse": false,
-     "realPictures": 0,
-     "videoCount": 0,
+     "realPictures": 4,
+     "videoCount": 1,
      "uiPictures": 0,
-     "pictureSamples": [],
+     "pictureSamples": [
+      "disqueria-1963.webp",
+      "rockola-wurlitzer-1100.webp",
+      "estudio-radio-1950s.webp"
+     ],
      "blendText": 0,
      "sideScrollers": 0,
      "brokenImages": [],
      "emoji": []
     },
     "hero": {
-     "text": "Los clásicos de siempre... siempre contigo.",
+     "text": "Clásicos en vivo Clásicos en vivo",
      "words": 6,
-     "chars": 43,
-     "lines": 3,
-     "size": 38.8,
-     "vw": 9.9,
-     "font": "Outfit",
-     "weight": 800,
-     "tracking": -0.025,
-     "leading": 1.02,
+     "chars": 33,
+     "lines": 2,
+     "size": 60.5,
+     "vw": 15.5,
+     "font": "Stack Sans Headline",
+     "weight": 300,
+     "tracking": -0.022,
+     "leading": 1,
      "upper": false,
      "italic": false,
      "mono": false,
-     "align": "left",
+     "align": "center",
      "position": "center",
-     "widthRatio": 0.87,
-     "top": 198,
+     "widthRatio": 0.92,
+     "top": 305,
      "tag": "h1",
      "kind": "heading"
     },
     "h1": {
-     "text": "Los clásicos de siempre... siempre contigo.",
+     "text": "Clásicos en vivo Clásicos en vivo",
      "words": 6,
-     "lines": 3,
-     "size": 38.8,
-     "font": "Outfit"
+     "lines": 2,
+     "size": 60.5,
+     "font": "Stack Sans Headline"
     },
     "headings": [
      {
-      "text": "Los clásicos de siempre... siempre contigo.",
+      "text": "Clásicos en vivo Clásicos en vivo",
       "words": 6,
-      "chars": 43,
+      "chars": 33,
+      "lines": 2,
+      "size": 60.5,
+      "vw": 15.5,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 305,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Everybody's Talkin'",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.72,
+      "top": 615,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Radio online de clásicos: de los 60 a los 90, elegidos uno por uno y sonando sin cortes, día y noche.",
+      "words": 21,
+      "chars": 101,
       "lines": 3,
-      "size": 38.8,
-      "vw": 9.9,
-      "font": "Outfit",
-      "weight": 800,
-      "tracking": -0.025,
-      "leading": 1.02,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": -0.01,
+      "leading": 1.3,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.87,
-      "top": 198,
-      "tag": "h1",
+      "widthRatio": 0.92,
+      "top": 888,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Los 60",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 58.5,
+      "vw": 15,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 1814,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Los 70",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 58.5,
+      "vw": 15,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 1925,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Los 80",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 58.5,
+      "vw": 15,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 2036,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Los 90",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 58.5,
+      "vw": 15,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 2147,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Así sonaba",
+      "words": 2,
+      "chars": 10,
+      "lines": 2,
+      "size": 72,
+      "vw": 18.5,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2434,
+      "tag": "h2",
       "kind": "heading"
      },
      {
       "text": "Las voces de CLASSIC",
       "words": 4,
       "chars": 20,
-      "lines": 1,
-      "size": 26.2,
-      "vw": 6.7,
-      "font": "Outfit",
-      "weight": 800,
-      "tracking": -0.025,
-      "leading": 1.02,
+      "lines": 2,
+      "size": 33.3,
+      "vw": 8.5,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 1.05,
       "upper": false,
       "italic": false,
       "mono": false,
       "align": "left",
-      "position": "left",
-      "widthRatio": 0.65,
-      "top": 1160,
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 3232,
       "tag": "h2",
       "kind": "heading"
+     },
+     {
+      "text": "Willy Toledo",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 3341,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Jaime Valencia",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 3493,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Pide tu canción",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 33.3,
+      "vw": 8.5,
+      "font": "Stack Sans Headline",
+      "weight": 300,
+      "tracking": -0.022,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4235,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Escuchar en vivo",
+      "words": 3,
+      "chars": 16,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 4910,
+      "tag": "button",
+      "kind": "heading"
+     },
+     {
+      "text": "Los clásicos de siempre... siempre contigo.",
+      "words": 6,
+      "chars": 43,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.85,
+      "top": 5136,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "15:47",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Stack Sans Text",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 5460,
+      "tag": "p",
+      "kind": "statement"
      }
     ],
     "headingSummary": {
-     "count": 2,
+     "count": 15,
      "maxLines": 3,
-     "over2Lines": 1,
-     "statements": 0,
-     "centered": 0,
-     "medianWords": 4,
+     "over2Lines": 0,
+     "statements": 8,
+     "centered": 1,
+     "medianWords": 2,
      "mixedFontHeadings": 0
     },
     "type": {
      "families": [
       {
-       "family": "Geist",
-       "share": 0.7,
+       "family": "Stack Sans Text",
+       "share": 0.95,
        "mono": false
       },
       {
-       "family": "Outfit",
-       "share": 0.3,
+       "family": "Stack Sans Headline",
+       "share": 0.05,
        "mono": false
       }
      ],
      "familyCount": 2,
      "sizes": [
-      11,
-      12,
-      14,
-      15,
+      13,
       16,
-      18,
-      19,
-      20,
+      17,
       22,
-      26,
-      39
+      33,
+      59,
+      61,
+      72
      ],
-     "sizeCount": 11,
+     "sizeCount": 8,
      "notLoaded": [],
      "body": {
-      "font": "Geist",
-      "size": 18,
-      "leading": 1.6,
-      "weight": 400,
+      "font": "Stack Sans Text",
+      "size": 17,
+      "leading": 1.5,
+      "weight": 500,
       "tracking": 0,
       "contrast": null
      },
-     "measureChars": 40,
+     "measureChars": 57,
      "max": {
-      "size": 38.8,
-      "vw": 9.9,
-      "font": "Outfit",
-      "text": "Los clásicos de siempre..."
+      "size": 72,
+      "vw": 18.5,
+      "font": "Stack Sans Headline",
+      "text": "Así"
      },
      "monoShare": 0,
      "monoProseShare": 0,
      "monoFamilies": [],
      "monoSamples": [],
-     "microLabels": 3,
-     "microLabelShare": 0.057,
-     "microSamples": [
-      "Ahora suena",
-      "Al micrófono",
-      "En vivo"
-     ],
-     "upperShare": 0.06,
-     "centerShare": 0.03,
-     "smallText": 1
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.03,
+     "centerShare": 0.02,
+     "smallText": 0
     },
-    "eyebrows": [
-     {
-      "text": "Radio online · En vivo las 24 horas",
-      "above": "Los clásicos de siempre... siempre conti",
-      "upper": false,
-      "tracked": false,
-      "mono": false,
-      "pill": false,
-      "size": 13.6,
-      "top": 154
-     },
-     {
-      "text": "Al micrófono",
-      "above": "Las voces de CLASSIC",
-      "upper": true,
-      "tracked": true,
-      "mono": false,
-      "pill": false,
-      "size": 12,
-      "top": 1136
-     }
-    ],
+    "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#0a0a0a",
+     "bodyBg": "#fffefe",
      "bodyBgHsl": {
       "h": 0,
-      "s": 0,
-      "l": 0.04
+      "s": 1,
+      "l": 1
      },
-     "dark": true,
+     "dark": false,
      "sectionBgs": [
       {
-       "color": "#1b1a1b",
-       "top": 1259,
+       "color": "#fffefe",
+       "top": 104,
        "hsl": {
-        "h": 300,
-        "s": 0.02,
+        "h": 0,
+        "s": 1,
+        "l": 1
+       }
+      },
+      {
+       "color": "#fe0100",
+       "top": 396,
+       "hsl": {
+        "h": 0,
+        "s": 1,
+        "l": 0.5
+       }
+      },
+      {
+       "color": "#0b0b0a",
+       "top": 768,
+       "hsl": {
+        "h": 60,
+        "s": 0.05,
+        "l": 0.04
+       }
+      },
+      {
+       "color": "#1a1a1a",
+       "top": 5677,
+       "hsl": {
+        "h": 0,
+        "s": 0,
         "l": 0.1
        }
       }
      ],
      "textColors": [
       {
-       "color": "#fefeff",
+       "color": "#fffefe",
+       "share": 0.68
+      },
+      {
+       "color": "#0b0b0a",
        "share": 0.31
       },
       {
-       "color": "#9a9b9b",
-       "share": 0.26
-      },
-      {
-       "color": "#c9c9c7",
-       "share": 0.21
-      },
-      {
-       "color": "#ff0000",
-       "share": 0.09
-      },
-      {
-       "color": "#8a8a8a",
-       "share": 0.06
+       "color": "#fe0100",
+       "share": 0.01
       }
      ],
      "button": {
-      "bg": "#fefeff",
+      "bg": "#0b0b0a",
       "hsl": {
-       "h": 240,
-       "s": 1,
-       "l": 1
+       "h": 60,
+       "s": 0.05,
+       "l": 0.04
       },
-      "fg": "#0a0a0a"
+      "fg": "#fffefe"
      },
      "lowContrast": []
     },
     "buttons": {
-     "count": 3,
-     "inHero": 3,
-     "radius": "pill",
-     "height": 46,
-     "withShadow": 1,
+     "count": 4,
+     "inHero": 2,
+     "radius": 0,
+     "height": 64,
+     "withShadow": 0,
      "withGradient": 0,
      "mono": 0,
      "upper": 0,
      "heroLabels": [
-      "Saltar al contenido",
-      "Escuchar en vivo",
-      "Ver programación"
+      "Saltar al contenido"
      ]
     },
     "surfaces": {
-     "shadowStatic": 4,
-     "shadowOverlay": 2,
-     "shadowSamples": [
-      "button.btn-live → rgba(255, 0, 0, 0.55) 0px 14px 30px -14px, rgba(255, 255, 255, 0.18) 0px 1px 0px",
-      "div.vinyl → rgb(12, 12, 12) 0px 0px 0px 6px inset, rgba(0, 0, 0, 0.9) 0px 40px 80px -30px",
-      "div.vinyl-label → rgba(0, 0, 0, 0.4) 0px 0px 0px 2px",
-      "div.now-card → rgba(255, 255, 255, 0.07) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.9) 0px 30px 60p"
-     ],
-     "gradients": 2,
-     "scrims": 2,
-     "gradientSamples": [
-      "section.hero → radial-gradient(55% 45% at 88% 30%, rgba(255, 0, 0, 0.13), rgba(0, 0, 0, 0) 70%), radial-gradient(40% 40% at 0",
-      "footer.site-footer → linear-gradient(rgb(13, 13, 13), rgb(10, 10, 10))"
-     ],
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
      "gradientText": 0,
-     "hairlines": 3,
-     "hairlineSamples": [
-      "header.site-header 390px",
-      "footer.site-footer 390px",
-      "section.playerbar 390px"
-     ],
-     "outlinedBoxes": 1,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
      "dashed": 0,
-     "blurred": 3,
-     "roundedBoxes": 1,
-     "boxRadius": 20,
-     "squareMedia": 0,
-     "roundedMedia": 2,
-     "mediaRadius": 18,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 4,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
      "textShadow": 0,
-     "cardRows": []
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 5282
+      }
+     ]
     },
     "heroMedia": [],
     "nav": {
      "links": 5,
-     "fixed": true,
-     "height": 114,
+     "fixed": false,
+     "height": 104,
      "floatingPill": false,
-     "blur": true
+     "blur": false
     },
     "fontsLoaded": [
-     "geist",
-     "outfit"
+     "stack sans headline",
+     "stack sans text"
     ]
    },
    "consoleErrors": []
@@ -958,163 +1762,14 @@
  ],
  "findings": [
   {
-   "level": "FAIL",
-   "id": "headline-lines",
-   "width": 1440,
-   "message": "1 headline(s) wrap past two lines at 1440px: \"Los clásicos de siempre... siempre contigo.\" → 3 lines (6 words, 70.4px)",
-   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
-  },
-  {
-   "level": "FAIL",
-   "id": "eyebrow",
-   "width": 1440,
-   "message": "2 eyebrow/kicker label(s) above headings: \"Radio online · En vivo las 24 horas\" above \"Los clásicos de siempre... siempre conti\"; \"Al micrófono\" above \"Las voces de CLASSIC\"",
-   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "micro-label",
-   "width": 1440,
-   "message": "3 tiny uppercase letter-spaced labels (e.g. \"Ahora suena\", \"Al micrófono\", \"En vivo\").",
-   "fix": "Use sentence-case text at a readable size, or delete the label.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "gradient",
-   "width": 1440,
-   "message": "2 gradient fill(s): section.hero → radial-gradient(55% 45% at 88% 30%, rgba(255, 0, 0, 0.13), rgba(0, 0, 0, 0) 70%), radial-gradient(40% 40% at 0 | footer.site-footer → linear-gradient(rgb(13, 13, 13), rgb(10, 10, 10))",
-   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "shadow",
-   "width": 1440,
-   "message": "4 box-shadow(s) on elements at rest: button.btn-live → rgba(255, 0, 0, 0.55) 0px 14px 30px -14px, rgba(255, 255, 255, 0.18) 0px 1px 0px | div.vinyl → rgb(12, 12, 12) 0px 0px 0px 6px inset, rgba(0, 0, 0, 0.9) 0px 40px 80px -30px | div.vinyl-label → rgba(0, 0, 0, 0.4) 0px 0px 0px 2px",
-   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "button-fx",
-   "width": 1440,
-   "message": "Buttons with shadow/glow.",
-   "fix": "Flat fill, one colour.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "hairline",
-   "width": 1440,
-   "message": "3 thin rule(s)/divider line(s): header.site-header 1440px | footer.site-footer 1440px | section.playerbar 1440px",
-   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
    "level": "WARN",
-   "id": "outlined-box",
+   "id": "measure",
    "width": 1440,
-   "message": "1 box(es) drawn with a 1px outline.",
-   "fix": "Prefer a filled surface or no box.",
+   "message": "Longest paragraph runs about 202 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch).",
    "alsoAt": [
-    768,
-    390
+    768
    ]
-  },
-  {
-   "level": "WARN",
-   "id": "glass",
-   "width": 1440,
-   "message": "3 backdrop-blur surfaces.",
-   "fix": "One blurred sticky bar at most; glass cards are a tell.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "WARN",
-   "id": "size-count",
-   "width": 1440,
-   "message": "11 different font sizes (11, 12, 14, 15, 16, 18, 19, 20, 22, 38, 70).",
-   "fix": "A page needs about five: display, heading, lead, body, small.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "few-pictures",
-   "width": 1440,
-   "message": "Only 1 picture(s) on the page (1 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
-   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
-  },
-  {
-   "level": "WARN",
-   "id": "no-footage",
-   "width": 1440,
-   "message": "No video anywhere on the page.",
-   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
-  },
-  {
-   "level": "WARN",
-   "id": "small-text",
-   "width": 1440,
-   "message": "1 text block(s) under 13px.",
-   "fix": "Nothing meant to be read goes below 13px.",
-   "alsoAt": [
-    768,
-    390
-   ]
-  },
-  {
-   "level": "FAIL",
-   "id": "overflow",
-   "width": 1440,
-   "message": "Page scrolls sideways by 10px at 1440px.",
-   "fix": "Constrain the element that is wider than the viewport (max-width: 100%, or overflow: clip on its section)."
-  },
-  {
-   "level": "FAIL",
-   "id": "still-page",
-   "width": 1440,
-   "message": "Only 5 element(s) moved while the page loaded and scrolled.",
-   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
-  },
-  {
-   "level": "FAIL",
-   "id": "headline-lines",
-   "width": 768,
-   "message": "1 headline(s) wrap past two lines at 768px: \"Los clásicos de siempre... siempre contigo.\" → 3 lines (6 words, 54.7px)",
-   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 32px or less."
-  },
-  {
-   "level": "FAIL",
-   "id": "headline-lines",
-   "width": 390,
-   "message": "1 headline(s) wrap past two lines at 390px: \"Los clásicos de siempre... siempre contigo.\" → 3 lines (6 words, 38.8px)",
-   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
   }
  ],
  "images": [
@@ -1123,7 +1778,8 @@
    "width": 1440,
    "fold": "/Users/billy/projects/classic-express/.taste-skill/inspect/desktop-fold.jpg",
    "pages": [
-    "/Users/billy/projects/classic-express/.taste-skill/inspect/desktop-page-01.jpg"
+    "/Users/billy/projects/classic-express/.taste-skill/inspect/desktop-page-01.jpg",
+    "/Users/billy/projects/classic-express/.taste-skill/inspect/desktop-page-02.jpg"
    ]
   },
   {
@@ -1131,7 +1787,8 @@
    "width": 768,
    "fold": "/Users/billy/projects/classic-express/.taste-skill/inspect/tablet-fold.jpg",
    "pages": [
-    "/Users/billy/projects/classic-express/.taste-skill/inspect/tablet-page-01.jpg"
+    "/Users/billy/projects/classic-express/.taste-skill/inspect/tablet-page-01.jpg",
+    "/Users/billy/projects/classic-express/.taste-skill/inspect/tablet-page-02.jpg"
    ]
   },
   {

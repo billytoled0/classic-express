@@ -1,7 +1,7 @@
 // Ejecutar: node tests/lib.test.mjs
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
-const { cleanTitle, pickSource, splitTitle, nowIn, showsFor, onAir } = createRequire(import.meta.url)('../js/lib.js');
+const { cleanTitle, pickSource, splitTitle, yearOf, decadeOf, nowIn, showsFor, onAir } = createRequire(import.meta.url)('../js/lib.js');
 
 // Metadata
 assert.equal(cleanTitle('﻿ Men At Work - Overkill (1983) '), 'Men At Work - Overkill (1983)');
@@ -18,6 +18,18 @@ assert.equal(pickSource(status, '/live'), status.icestats.source[0]);
 assert.equal(pickSource(status, '/otro'), null); // nunca muestra la canción de otro mount
 assert.equal(pickSource({ icestats: { source: { title: 'único' } } }, '/x').title, 'único');
 assert.equal(pickSource({}, '/x'), null);
+
+// Año y década de la canción en vivo
+assert.equal(yearOf('Men At Work - Overkill (1983)'), 1983);
+assert.equal(yearOf('Paul MC Cartney - Mull Of Kintyre - 1977'), 1977);
+assert.equal(yearOf('The Beatles - She Loves You (Remastered 2009)'), 2009);
+assert.equal(yearOf('Donna Summer - Hot Stuff'), null);
+assert.equal(yearOf('Blondie - 1000 ways'), null);
+assert.equal(decadeOf(1983), '80');
+assert.equal(decadeOf(1960), '60');
+assert.equal(decadeOf(2009), null);
+assert.equal(decadeOf(1958), null);
+assert.equal(decadeOf(null), null);
 
 // Programación — 2026-10-14 15:30 UTC es miércoles 10:30 en Lima (UTC-5)
 const now = nowIn('America/Lima', new Date('2026-10-14T15:30:00Z'));

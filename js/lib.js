@@ -22,6 +22,17 @@ function splitTitle(raw) {
   return { artist: raw.slice(0, i).trim(), title: raw.slice(i + 3).trim() };
 }
 
+// Año de la canción si viene en el título ("Overkill (1983)", "Mull Of Kintyre - 1977").
+function yearOf(raw) {
+  const m = (raw ?? '').match(/\b(19[5-9]\d|20[0-2]\d)\b/);
+  return m ? Number(m[1]) : null;
+}
+
+// Década que CLASSIC programa (60–90) o null si cae fuera.
+function decadeOf(year) {
+  return year >= 1960 && year < 2000 ? String(Math.floor(year / 10) % 10 * 10) : null;
+}
+
 // ── Programación ───────────────────────────────────────────────────
 
 const DAYS = ['lun', 'mar', 'mie', 'jue', 'vie', 'sab', 'dom'];
@@ -53,4 +64,4 @@ const showsFor = (shows, day) =>
 const onAir = (show, now) =>
   show.dias.includes(now.day) && toMin(show.inicio) <= now.min && now.min < toMin(show.fin);
 
-if (typeof module === 'object') module.exports = { cleanTitle, pickSource, splitTitle, DAYS, DAY_LABELS, toMin, nowIn, showsFor, onAir };
+if (typeof module === 'object') module.exports = { cleanTitle, pickSource, splitTitle, yearOf, decadeOf, DAYS, DAY_LABELS, toMin, nowIn, showsFor, onAir };

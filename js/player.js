@@ -36,6 +36,7 @@ function createPlayer(cfg) {
     title: '',
     artist: '',
     artwork: null,
+    year: null,           // año de la canción si viene en el título
     metaReady: false,     // false → la UI muestra skeleton
     realViz,
     canSetVolume,
@@ -197,6 +198,7 @@ function createPlayer(cfg) {
       const raw = cleanTitle(pickSource(await res.json(), mountPath)?.title);
       if (raw === lastRaw) return;
       lastRaw = raw;
+      state.year = yearOf(raw);
       if (!raw) {
         Object.assign(state, { title: cfg.name, artist: cfg.slogan, artwork: null });
       } else {

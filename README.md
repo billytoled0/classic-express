@@ -25,8 +25,21 @@ css/style.css            ← estilos (colores en :root)
 js/player.js             ← reproductor (stream, reconexión, metadata, Media Session)
 js/app.js                ← navegación, programación, contacto, visualizador
 js/lib.js                ← funciones puras (testeadas)
-assets/                  ← ícono, imagen para compartir (og.png), logos
+assets/logos/            ← logos originales de la marca
+assets/img/              ← versiones web de los logos
+assets/archivo/          ← fotos y video de archivo (créditos en credits.json y en el footer)
+.taste-skill/            ← notas y capturas del rediseño (no se publica; se puede borrar)
 ```
+
+## Diseño
+
+Dirección "capítulos de color": cada sección es un campo plano a pantalla completa en los tres colores de la marca (blanco, rojo `#FF0000` y negro). Tipografía Stack Sans (Headline 300 para los títulos y Text para el resto), cinco tamaños y esquinas cuadradas. No hay líneas finas, sombras, degradados ni efecto vidrio. La única excepción son las barras del ecualizador, que llevan el degradado del logo.
+
+- **Hero:** "Clásicos en vivo" cortado por la costura blanco/rojo. En el campo rojo aparecen el play y lo que suena ahora (Icecast, en vivo).
+- **Décadas:** si el título de la canción trae el año (p. ej. "Overkill (1983)"), esa década se enciende en rojo con "Sonando ahora".
+- **Fotos de archivo:** en blanco y negro como tratamiento único. Para cambiar una, reemplaza el `.webp` en `assets/archivo/` y actualiza su crédito en el footer de `index.html`.
+- **Movimiento:** los títulos suben desde su línea, las secciones entran al hacer scroll, la tira de fotos se desplaza y el clip del disco gira en loop. Con "Reducir movimiento" activado en el sistema, todo eso se apaga; el vinilo y el ecualizador siguen, porque solo se mueven al dar play.
+- **Revisión de calidad:** `node ~/.claude/skills/design-taste-frontend/scripts/inspect.mjs index.html --allow covered-text`. La regla `covered-text` se permite porque el inspector cuenta como "tapado" el texto que pasa por detrás de la barra fija del reproductor.
 
 ## Configurar el stream
 
@@ -91,7 +104,7 @@ Color: el rojo de los logos es `#FF0000` exacto y el sitio usa ese. Con texto bl
 
 ## Conductores
 
-Van en `data/programacion.js` → `conductores` (nombre, foto y una `descripcion` opcional). Se muestran en Inicio y en Nosotros. Por ahora ambos usan la imagen genérica `assets/img/locutor.svg`. Para poner una foto real, guárdala en `assets/img/` (vertical 4:5, webp) y cambia `foto`.
+Van en `data/programacion.js` → `conductores` (nombre y `descripcion`; las actuales son texto de ejemplo). Se muestran en el panel "Las voces de CLASSIC" (Inicio y Nosotros), junto a una foto de archivo de un estudio de radio de los 50 recortada en forma de disco.
 
 ## SEO / compartir en WhatsApp
 
