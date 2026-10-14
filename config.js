@@ -7,7 +7,7 @@
 // ─────────────────────────────────────────────────────────────────────
 const CLASSIC_CONFIG = {
   name: 'CLASSIC',
-  slogan: 'Los clásicos de siempre... siempre contigo.',
+  slogan: 'Los clásicos de siempre.',
 
   // Mount de Icecast2 y su endpoint de estado. Ambos deben ser HTTPS (ver README).
   streamUrl: 'https://sonic.sistemahost.es:7118/live2',
