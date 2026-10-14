@@ -151,5 +151,6 @@ Se puede subir a cualquier hosting estático; no hay nada que compilar.
 - Reconexión automática: 6 intentos, esperando 2, 4, 6, 8, 10 y 10 s entre uno y otro. Muestra el mensaje "Reconectando… (n/6)" y reintenta apenas vuelve la red.
 - Si el buffer se adelanta más de 8 s, recarga en silencio para no desfasarse del vivo.
 - Media Session: controles, título y carátula en la pantalla de bloqueo.
+- Barra espaciadora: pausa o reanuda (no actúa si el foco está en un campo, botón o enlace).
 - El volumen se guarda en `localStorage`. En celular, el parlante abre un panel con el control deslizante. En iPhone solo hay silenciar, porque iOS no deja que una web cambie el volumen (se detecta solo).
 - En celulares el ecualizador es simulado: en iOS, el audio que pasa por Web Audio se corta al bloquear la pantalla.

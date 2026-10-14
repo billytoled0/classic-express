@@ -34,6 +34,15 @@ const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const player = createPlayer(cfg);
 const p = player.state;
 
+// Barra espaciadora = pausar / reanudar. No se toca cuando el foco está en algo que
+// ya usa el espacio (campos de texto, botones, enlaces, el slider) ni con modificadores.
+addEventListener('keydown', (e) => {
+  if (e.code !== 'Space' || e.repeat || e.ctrlKey || e.metaKey || e.altKey) return;
+  if (e.target.closest?.('input, textarea, select, button, a, [contenteditable], [role="slider"]')) return;
+  e.preventDefault(); // que no haga scroll
+  player.toggle();
+});
+
 // ── Estado compartido por la app y sus componentes ──
 const hosts = CLASSIC_DATA.conductores ?? [];
 const shows = CLASSIC_DATA.programas ?? [];
