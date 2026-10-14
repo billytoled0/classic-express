@@ -42,6 +42,8 @@ body {
   overflow-x: clip;
 }
 img, svg, video { display: block; max-width: 100%; }
+/* Los atributos width/height del HTML (reservan espacio al cargar) no deben fijar el alto: manda el aspect-ratio */
+img, video { height: auto; }
 svg { width: 1.25em; height: 1.25em; flex: none; }
 a { color: inherit; }
 button, input { font: inherit; color: inherit; }
