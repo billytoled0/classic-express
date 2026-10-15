@@ -141,7 +141,12 @@ p { text-wrap: pretty; }
 .eq-hero { height: 24px; width: min(200px, 40vw); }
 .hero .eq-hero > span { background: var(--ink); }
 
-.hero-vinyl { position: absolute; z-index: 1; right: -7vw; bottom: -21vw; width: min(42vw, 640px); }
+/* Vinilo entero en el campo rojo, centrado en su alto, a la derecha del texto */
+.hero-vinyl {
+  position: absolute; z-index: 1; top: calc(var(--seam) + 28px); bottom: 28px; right: var(--m);
+  display: grid; align-content: center; aspect-ratio: 1; max-width: 26vw;
+}
+@media (max-width: 1279px) { .hero-sub { width: min(100% - 2 * var(--m), 34ch); } }
 
 @media (max-width: 767px) {
   .hero { --seam: 44%; }
