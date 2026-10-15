@@ -141,7 +141,8 @@ p { text-wrap: pretty; }
 .eq-hero { height: 24px; width: min(200px, 40vw); }
 .hero .eq-hero > span { background: var(--ink); }
 
-.hero-vinyl { position: absolute; z-index: 1; right: -7vw; bottom: -21vw; width: min(42vw, 640px); }
+.hero-vinyl { position: absolute; z-index: 1; right: -5vw; bottom: -8vw; width: min(36vw, 560px); }
+@media (max-width: 1279px) { .hero-sub { width: min(100% - 2 * var(--m), 34ch); } }
 
 @media (max-width: 767px) {
   .hero { --seam: 44%; }
